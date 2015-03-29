@@ -15,7 +15,7 @@ class comInstaller{
            $scope.getDemoInfo=function(name, mode){
                $http.get('JwtComponent/GetDemoInfo?name={0}&mode={1}'.format(name, mode))
                .success(function(res){                   
-                  /* var info=res.data, title=mode==='api'?'Api':'Demo Code';
+                   var info=res.data, title=mode==='api'?'Api':'Demo Code';
                    var modalInstance = $modal.open({
                        templateUrl: 'myModalContent.html',
                        controller: function($scope, $modalInstance, data){
@@ -32,8 +32,7 @@ class comInstaller{
                                return { info:info , title:title};
                            }
                        }
-                   });*/
-                 	alert(res.data);
+                   });
                });
            }
         };

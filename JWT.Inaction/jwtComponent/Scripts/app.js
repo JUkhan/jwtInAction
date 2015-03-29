@@ -10,7 +10,7 @@ import {default as filters} from 'Scripts/app.filters.js';
 
 var moduleName='app'; 
 
-angular.module(moduleName,['ui.router', 'ngResource',  'LocalStorageModule', 'angular-loading-bar','ui.bootstrap', controllers, services, directives, filters])
+angular.module(moduleName,['ui.router', 'ngResource',"ngSanitize",  'LocalStorageModule', 'angular-loading-bar','ui.bootstrap', controllers, services, directives, filters])
     .factory('authInterceptorService', authInterceptorService)
     .factory('authService', authService)
     .config(config)
@@ -24,9 +24,9 @@ angular.module(moduleName,['ui.router', 'ngResource',  'LocalStorageModule', 'an
     })
     .run(['authService', '$rootScope', '$templateCache', function(authService, $rootScope, $templateCache) {
         authService.fillAuthData();
-        $rootScope.$on('$viewContentLoaded', function() {
-            $templateCache.removeAll();
-        });
+        //$rootScope.$on('$viewContentLoaded', function() {
+        //    $templateCache.removeAll();
+        //});
     }]);
 
 export default moduleName;
