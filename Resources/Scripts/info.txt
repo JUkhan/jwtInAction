@@ -1,0 +1,37 @@
+
+////////////machineKey////////////////
+<machineKey validationKey="BDE5239FBD71982481D87D815FA0A65B9F5982D99DFA96E6D92B782E0952D58818B479B19FF6D95263E85B0209297E6858B57D1E0BD3EFECE5E35742D605F2A7"
+            decryptionKey="8E8496D7342EA258526CF6177E04EA7D208E359C95E60CD2A462FC062B9E41B3"
+            validation="SHA1"
+            decryption="AES"/>
+<add key="DefaultNavigation" value="root/nav1" />
+<add key="ComponentsUrl" value="http://localhost/Components/" />
+<add key="DBContext" value="SchoolContext" />
+<add key="ServiceProject" value="Services" />   
+<add key="EntityProject" value="EntityModule" />
+<add key="RootPath" value="" />
+////////////////////////////
+STS
+Install-Package Microsoft.AspNet.WebApi.Owin -Version 5.2.2
+Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.0.0
+Install-Package Microsoft.AspNet.Identity.Owin -Version 2.0.1
+Install-Package Microsoft.AspNet.Identity.EntityFramework -Version 2.0.1	
+Install-Package Microsoft.Owin.Security.OAuth -Version 2.1.0
+Install-Package Microsoft.Owin.Cors -Version 3.0.0
+
+Install-Package Microsoft.Owin.Security.Facebook -Version 2.1.0
+Install-Package Microsoft.Owin.Security.Google -Version 2.1.0
+
+////////////webApi///////////////
+Install-Package Microsoft.AspNet.WebApi -Version 5.2.2
+Install-Package Microsoft.AspNet.WebApi.Owin -Version 5.2.2
+Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.0.0
+Install-Package Microsoft.Owin.Cors -Version 3.0.0
+Install-Package Microsoft.Owin.Security.OAuth -Version 2.1.0
+
+/////////wevApp////////////
+Install-Package Microsoft.AspNet.SignalR -Version 2.2.0
+Install-Package log4net
+Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.0.0
+Install-Package Microsoft.Owin.Cors -Version 3.0.0
+Install-Package Microsoft.Owin.Security.OAuth -Version 2.1.0
