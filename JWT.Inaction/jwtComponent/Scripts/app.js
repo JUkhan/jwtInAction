@@ -18,9 +18,9 @@ angular.module(moduleName,['ui.router', 'ngResource',"ngSanitize",  'LocalStorag
         $httpProvider.interceptors.push('authInterceptorService');
     })
     .constant('ngAuthSettings', {
-        stsServiceBaseUri: 'http://localhost:21545/',        
-        apiServiceBaseUri: 'http://localhost:22752/',
-        clientId: 'nativeApp'//nativeApp//jwtApp
+        stsServiceBaseUri: 'http://dacw0066/STS/',        
+        apiServiceBaseUri: 'http://dacw0066/WebApi/',
+        clientId: 'jwtApp'//nativeApp//jwtApp
     })
     .run(['authService', '$rootScope', '$templateCache', function(authService, $rootScope, $templateCache) {
         authService.fillAuthData();
