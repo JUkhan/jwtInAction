@@ -22,3 +22,21 @@
 2015-03-29 08:33:37,339 [27] INFO  Jwtex.JwtExController - files found: 3
 2015-03-29 08:38:29,442 [7] INFO  jwt.internals.jwtAppManager - chartNav
 2015-03-29 08:47:10,212 [27] INFO  jwt.internals.jwtAppManager - home
+2015-03-31 07:04:24,715 [6] ERROR Jwtex.JwtComponentController - System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.
+   at System.IO.MemoryStream.Seek(Int64 offset, SeekOrigin loc)
+   at System.IO.Compression.ZipArchive.ReadEndOfCentralDirectory()
+   --- End of inner exception stack trace ---
+   at System.IO.Compression.ZipArchive.ReadEndOfCentralDirectory()
+   at System.IO.Compression.ZipArchive.Init(Stream stream, ZipArchiveMode mode, Boolean leaveOpen)
+   at System.IO.Compression.ZipArchive..ctor(Stream stream, ZipArchiveMode mode, Boolean leaveOpen, Encoding entryNameEncoding)
+   at Jwtex.JwtComponentController.Download(String name, String comtype)
+2015-03-31 07:06:11,861 [21] INFO  Jwtex.JwtExController - name:jwtFilter, mode:Components
+2015-03-31 07:06:11,863 [21] INFO  Jwtex.JwtExController - files found: 1
+2015-03-31 07:09:16,981 [36] ERROR Jwtex.JwtComponentController - System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.
+   at System.IO.MemoryStream.Seek(Int64 offset, SeekOrigin loc)
+   at System.IO.Compression.ZipArchive.ReadEndOfCentralDirectory()
+   --- End of inner exception stack trace ---
+   at System.IO.Compression.ZipArchive.ReadEndOfCentralDirectory()
+   at System.IO.Compression.ZipArchive.Init(Stream stream, ZipArchiveMode mode, Boolean leaveOpen)
+   at System.IO.Compression.ZipArchive..ctor(Stream stream, ZipArchiveMode mode, Boolean leaveOpen, Encoding entryNameEncoding)
+   at Jwtex.JwtComponentController.Download(String name, String comtype)

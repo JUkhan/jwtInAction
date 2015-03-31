@@ -178,7 +178,7 @@
     <Content Include="Scripts\app.controllers.js" />
     <Content Include="Scripts\app.directives.js" />
     <Content Include="Scripts\app.filters.js" />
-    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\Base\app.js" />
     <Content Include="Scripts\app.services.js" />
     <Content Include="Scripts\appStarter.js" />
     <Content Include="Scripts\authComplete.js" />
@@ -189,6 +189,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Components\associate\associate.html" />
     <Content Include="Scripts\Components\associate\associateCtrl.js" />
+    <Content Include="Scripts\Components\chatWidget\chatWidget.html" />
+    <Content Include="Scripts\Components\chatWidget\chatWidgetCtrl.js" />
+    <Content Include="Scripts\Components\chatWidget\chatWidgetSvc.js" />
     <Content Include="Scripts\Components\home\home.html" />
     <Content Include="Scripts\Components\home\homeCtrl.js" />
     <Content Include="Scripts\Components\home\homeSvc.js" />
@@ -212,6 +215,8 @@
     <Content Include="Scripts\Layouts\root\root.html" />
     <Content Include="Scripts\Layouts\root\rootCtrl.js" />
     <Content Include="Scripts\loading-bar.min.js" />
+    <Content Include="Scripts\Modules\testModule\testModule.js" />
+    <Content Include="Scripts\Modules\testModule\testService.js" />
     <Content Include="Scripts\nv.d3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

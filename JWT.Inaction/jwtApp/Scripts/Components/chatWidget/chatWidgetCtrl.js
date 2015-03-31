@@ -1,4 +1,4 @@
-import BaseCtrl from 'Scripts/base/BaseCtrl.js';
+import BaseCtrl from 'Scripts/Base/BaseCtrl.js';
 const SVC=new WeakMap();
 class chatWidgetCtrl extends BaseCtrl
 {

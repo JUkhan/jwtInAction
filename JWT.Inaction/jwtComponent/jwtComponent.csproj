@@ -176,7 +176,7 @@
     <Content Include="Scripts\app.controllers.js" />
     <Content Include="Scripts\app.directives.js" />
     <Content Include="Scripts\app.filters.js" />
-    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\Base\app.js" />
     <Content Include="Scripts\app.services.js" />
     <Content Include="Scripts\appStarter.js" />
     <Content Include="Scripts\authComplete.js" />
@@ -201,6 +201,9 @@
     <Content Include="Scripts\Components\tableWidget\tableWidget.html" />
     <Content Include="Scripts\Components\tableWidget\tableWidgetCtrl.js" />
     <Content Include="Scripts\Components\tableWidget\tableWidgetSvc.js" />
+    <Content Include="Scripts\Components\testModuleWidget\testModuleWidget.html" />
+    <Content Include="Scripts\Components\testModuleWidget\testModuleWidgetCtrl.js" />
+    <Content Include="Scripts\Components\testModuleWidget\testModuleWidgetSvc.js" />
     <Content Include="Scripts\config.js" />
     <Content Include="Scripts\d3.min.js" />
     <Content Include="Scripts\Directives\comInstaller\comInstaller.css" />
@@ -220,6 +223,8 @@
     <Content Include="Scripts\Layouts\root\root.html" />
     <Content Include="Scripts\Layouts\root\rootCtrl.js" />
     <Content Include="Scripts\loading-bar.min.js" />
+    <Content Include="Scripts\Modules\testModule\testModule.js" />
+    <Content Include="Scripts\Modules\testModule\testService.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.12.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
