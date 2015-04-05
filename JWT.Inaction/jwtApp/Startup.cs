@@ -25,7 +25,7 @@ namespace jwtApp
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             //app.UseWebApi(config);
             app.MapSignalR();
-            GlobalHost.HubPipeline.RequireAuthentication();
+            
             Jwtex.Utilities.RegisterLog4Net();
         }
 

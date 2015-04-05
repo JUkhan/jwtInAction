@@ -40,3 +40,12 @@
    at System.IO.Compression.ZipArchive.Init(Stream stream, ZipArchiveMode mode, Boolean leaveOpen)
    at System.IO.Compression.ZipArchive..ctor(Stream stream, ZipArchiveMode mode, Boolean leaveOpen, Encoding entryNameEncoding)
    at Jwtex.JwtComponentController.Download(String name, String comtype)
+2015-04-05 06:30:22,988 [8] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 06:30:23,034 [8] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 06:30:37,302 [7] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-04-05 06:30:37,303 [7] INFO  Jwtex.JwtExController - files found: 5
+2015-04-05 06:36:10,995 [17] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 06:36:10,997 [17] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 06:39:13,000 [6] INFO  jwt.internals.jwtAppManager - home
+2015-04-05 06:52:56,789 [64] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 06:52:56,791 [64] INFO  Jwtex.JwtExController - files found: 2
