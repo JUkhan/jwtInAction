@@ -163,3 +163,29 @@
 2015-03-31 07:13:39,972 [17] INFO  Jwtex.JwtExController - files found: 3
 2015-03-31 07:16:17,114 [15] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
 2015-03-31 07:16:17,115 [15] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 14:14:41,984 [10] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 14:14:42,022 [10] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 14:14:46,714 [14] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-04-05 14:14:46,715 [14] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 14:15:11,081 [14] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-04-05 14:15:11,082 [14] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 14:49:43,261 [10] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-04-05 14:49:43,263 [10] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 15:59:39,940 [15] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 15:59:39,965 [15] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 15:59:54,534 [12] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 15:59:54,535 [12] INFO  Jwtex.JwtExController - files found: 1
+2015-04-05 16:02:19,844 [16] INFO  Jwtex.JwtExController - name:angularCharts, mode:Modules
+2015-04-05 16:02:19,845 [16] INFO  Jwtex.JwtExController - files found: 1
+2015-04-05 16:05:00,678 [12] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-04-05 16:05:00,679 [12] INFO  Jwtex.JwtExController - files found: 5
+2015-04-05 16:12:00,116 [18] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-04-05 16:12:00,140 [18] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 16:13:58,540 [17] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-04-05 16:13:58,541 [17] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 16:14:26,252 [19] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-04-05 16:14:26,253 [19] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 17:24:26,797 [30] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-04-05 17:24:26,798 [30] INFO  Jwtex.JwtExController - files found: 5
+2015-04-05 17:32:02,401 [25] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-04-05 17:32:02,403 [25] INFO  Jwtex.JwtExController - files found: 3
