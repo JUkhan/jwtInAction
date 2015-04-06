@@ -37,7 +37,7 @@ namespace STS.Migrations
                     ApplicationType =  Models.ApplicationTypes.JavaScript, 
                     Active = true, 
                     RefreshTokenLifeTime = 7200, 
-                    AllowedOrigin = "http://localhost:53954/"
+                    AllowedOrigin = "http://dacw0066/"
                 },
                 new Client
                 { Id = "nativeApp", 

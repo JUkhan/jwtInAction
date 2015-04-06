@@ -145,6 +145,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\ComDemoApi\angularCharts\" />
+    <Folder Include="Scripts\Modules\angularCharts\" />
+    <Folder Include="Scripts\Modules\testModule\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -185,7 +188,6 @@
     <Content Include="Scripts\Base\BaseCtrl.js" />
     <Content Include="Scripts\Base\BaseSvc.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\ComDemoApi\angularCharts\code.html" />
     <Content Include="Scripts\ComDemoApi\tableCom\code.html" />
     <Content Include="Scripts\Components\associate\associate.html" />
     <Content Include="Scripts\Components\associate\associateCtrl.js" />
@@ -224,9 +226,6 @@
     <Content Include="Scripts\Layouts\root\root.html" />
     <Content Include="Scripts\Layouts\root\rootCtrl.js" />
     <Content Include="Scripts\loading-bar.min.js" />
-    <Content Include="Scripts\Modules\angularCharts\angularCharts.js" />
-    <Content Include="Scripts\Modules\testModule\testModule.js" />
-    <Content Include="Scripts\Modules\testModule\testService.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.12.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
