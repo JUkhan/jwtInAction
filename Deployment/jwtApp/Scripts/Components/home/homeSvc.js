@@ -9,7 +9,8 @@ class homeSvc extends BaseSvc
 	}
   	getData(){
        
-        return HTTP.get(this).get(this.baseUrl+'api/orders');
+       var config={limit:20, columns:[{name:'Animal', type:'animal'}]};
+        return HTTP.get(this).post('Jwt/GetDummyData', config);
   
     }
 	static homeFactory(http, ngAuthSettings)	{
