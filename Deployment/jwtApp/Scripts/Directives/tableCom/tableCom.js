@@ -69,7 +69,7 @@ class tableCom
             }
         }else{
           for(var prop in data[0]){
-               tpl.push('<td ng-bind="row[\''+prop+'\']"></td>');
+               tpl.push('<td ng-bind="item[\''+prop+'\']"></td>');
             }
         }
       	return tpl.join('');
