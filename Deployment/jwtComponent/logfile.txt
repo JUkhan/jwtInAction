@@ -1,0 +1,191 @@
+2015-03-28 12:40:28,060 [7] INFO  Jwtex.JwtExController - name:home, mode:Widgets
+2015-03-28 12:40:28,091 [7] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 12:41:50,399 [7] INFO  Jwtex.JwtExController - name:home, mode:Widgets
+2015-03-28 12:41:50,466 [7] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 12:55:12,884 [14] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-28 12:55:12,935 [14] INFO  Jwtex.JwtExController - files found: 2
+2015-03-28 12:57:34,710 [30] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 12:57:34,712 [30] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 12:58:47,310 [34] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-28 12:58:47,311 [34] INFO  Jwtex.JwtExController - files found: 2
+2015-03-28 12:59:17,279 [25] INFO  jwt.internals.jwtAppManager - tableNav
+2015-03-28 13:06:10,598 [29] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-28 13:06:10,602 [29] INFO  Jwtex.JwtExController - files found: 2
+2015-03-28 13:07:24,439 [32] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 13:07:24,439 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 14:08:10,568 [5] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-28 14:08:10,627 [5] INFO  Jwtex.JwtExController - files found: 2
+2015-03-28 14:16:34,208 [21] INFO  Jwtex.JwtExController - name:home, mode:Widgets
+2015-03-28 14:16:34,237 [21] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 14:22:58,580 [19] INFO  Jwtex.JwtExController - name:home, mode:Widgets
+2015-03-28 14:22:58,612 [19] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 14:23:27,298 [25] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 14:23:27,302 [25] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 17:23:50,271 [25] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 17:23:50,362 [25] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 17:25:46,090 [19] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 17:25:46,091 [19] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 17:29:42,374 [12] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-03-28 17:29:42,375 [12] INFO  Jwtex.JwtExController - files found: 4
+2015-03-28 17:30:41,477 [31] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 17:30:41,478 [31] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 17:31:34,884 [38] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-28 17:31:34,884 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 18:08:32,854 [11] INFO  jwt.internals.jwtAppManager - home
+2015-03-28 18:16:36,820 [43] INFO  jwt.internals.jwtAppManager - home
+2015-03-28 18:58:53,383 [79] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 18:58:53,385 [79] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 18:59:15,706 [68] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-28 18:59:15,707 [68] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 19:07:43,830 [77] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-28 19:07:43,832 [77] INFO  Jwtex.JwtExController - files found: 2
+2015-03-28 19:12:01,272 [83] INFO  jwt.internals.jwtAppManager - tableNav
+2015-03-28 19:13:36,218 [85] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-28 19:13:36,220 [85] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 19:13:57,896 [80] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-28 19:13:57,897 [80] INFO  Jwtex.JwtExController - files found: 2
+2015-03-28 19:39:40,868 [60] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-28 19:39:40,895 [60] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:08:13,147 [32] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-28 21:08:13,207 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:15:22,443 [46] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-28 21:15:22,444 [46] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:16:07,736 [45] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 21:16:07,737 [45] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:16:41,256 [36] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-28 21:16:41,287 [36] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:19:58,919 [38] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-28 21:19:58,921 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:25:19,840 [31] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 21:25:19,864 [31] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:25:25,762 [38] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-28 21:25:25,763 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:27:50,227 [38] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 21:27:50,229 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:43:49,783 [43] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-28 21:43:49,785 [43] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:44:04,814 [32] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 21:44:04,815 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 21:48:10,459 [38] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 21:48:10,461 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:01:33,771 [32] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 22:01:33,773 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:02:13,442 [32] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 22:02:13,443 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:03:28,234 [36] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 22:03:28,235 [36] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:07:08,496 [46] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 22:07:08,497 [46] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:09:45,070 [35] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 22:09:45,071 [35] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:17:57,727 [36] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 22:17:57,729 [36] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 22:52:09,193 [35] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-28 22:52:09,194 [35] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 23:51:34,343 [17] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-28 23:51:34,405 [17] INFO  Jwtex.JwtExController - files found: 3
+2015-03-28 23:51:54,057 [7] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-28 23:51:54,058 [7] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 05:39:57,875 [7] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 05:39:58,213 [7] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 05:53:09,692 [27] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-29 05:53:09,694 [27] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 05:53:40,079 [38] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 05:53:40,080 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:02:51,033 [37] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-29 06:02:51,034 [37] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:06:14,430 [38] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:06:14,432 [38] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:07:28,485 [48] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-29 06:07:28,487 [48] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:10:31,571 [37] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:10:31,573 [37] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:18:21,063 [50] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 06:18:21,064 [50] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:23:06,772 [42] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-29 06:23:06,774 [42] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:23:11,603 [35] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:23:11,604 [35] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:24:29,923 [39] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 06:24:29,924 [39] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:24:58,793 [46] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:24:58,794 [46] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:26:04,633 [33] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 06:26:04,634 [33] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:29:42,334 [32] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:29:42,336 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:33:33,678 [27] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-29 06:33:33,679 [27] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:36:02,620 [32] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 06:36:02,621 [32] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:36:41,162 [35] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:36:41,163 [35] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:37:47,057 [34] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 06:37:47,058 [34] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:38:17,577 [15] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-29 06:38:17,578 [15] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:40:05,431 [47] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-03-29 06:40:05,432 [47] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:40:45,775 [46] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-03-29 06:40:45,776 [46] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 06:47:55,988 [42] INFO  Jwtex.JwtExController - name:tableCom, mode:Components
+2015-03-29 06:47:55,989 [42] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 08:50:17,884 [36] INFO  jwt.internals.jwtAppManager - home
+2015-03-29 08:50:39,640 [33] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-29 08:50:39,642 [33] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 19:06:20,168 [23] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 19:06:20,229 [23] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 19:10:23,747 [7] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-29 19:10:23,770 [7] INFO  Jwtex.JwtExController - files found: 3
+2015-03-29 19:18:17,108 [12] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-29 19:18:17,133 [12] INFO  Jwtex.JwtExController - files found: 3
+2015-03-31 07:04:24,603 [8] ERROR Jwtex.JwtComponentController - System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\FFV\jwtInAction\JWT.Inaction\jwtComponent\Scripts\Modules\tableCom'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.DirectoryInfo.EnumerateFileSystemInfos(String searchPattern, SearchOption searchOption)
+   at System.IO.Compression.ZipFile.DoCreateFromDirectory(String sourceDirectoryName, String destinationArchiveFileName, Nullable`1 compressionLevel, Boolean includeBaseDirectory, Encoding entryNameEncoding)
+   at Jwtex.JwtComponentController.GetComponent(String componentName, String comtype)
+2015-03-31 07:07:49,524 [17] INFO  Jwtex.JwtExController - name:comInstaller, mode:Components
+2015-03-31 07:07:49,526 [17] INFO  Jwtex.JwtExController - files found: 3
+2015-03-31 07:09:16,977 [18] ERROR Jwtex.JwtComponentController - System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\FFV\jwtInAction\JWT.Inaction\jwtComponent\Scripts\Modules\tableCom'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.DirectoryInfo.EnumerateFileSystemInfos(String searchPattern, SearchOption searchOption)
+   at System.IO.Compression.ZipFile.DoCreateFromDirectory(String sourceDirectoryName, String destinationArchiveFileName, Nullable`1 compressionLevel, Boolean includeBaseDirectory, Encoding entryNameEncoding)
+   at Jwtex.JwtComponentController.GetComponent(String componentName, String comtype)
+2015-03-31 07:11:04,902 [17] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-03-31 07:11:04,904 [17] INFO  Jwtex.JwtExController - files found: 1
+2015-03-31 07:12:53,180 [6] INFO  Jwtex.JwtExController - name:tableWidget, mode:Widgets
+2015-03-31 07:12:53,181 [6] INFO  Jwtex.JwtExController - files found: 3
+2015-03-31 07:13:39,970 [17] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-03-31 07:13:39,972 [17] INFO  Jwtex.JwtExController - files found: 3
+2015-03-31 07:16:17,114 [15] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-03-31 07:16:17,115 [15] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 14:14:41,984 [10] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 14:14:42,022 [10] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 14:14:46,714 [14] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-04-05 14:14:46,715 [14] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 14:15:11,081 [14] INFO  Jwtex.JwtExController - name:sparkWidget, mode:Widgets
+2015-04-05 14:15:11,082 [14] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 14:49:43,261 [10] INFO  Jwtex.JwtExController - name:spark, mode:Components
+2015-04-05 14:49:43,263 [10] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 15:59:39,940 [15] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 15:59:39,965 [15] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 15:59:54,534 [12] INFO  Jwtex.JwtExController - name:testModule, mode:Modules
+2015-04-05 15:59:54,535 [12] INFO  Jwtex.JwtExController - files found: 1
+2015-04-05 16:02:19,844 [16] INFO  Jwtex.JwtExController - name:angularCharts, mode:Modules
+2015-04-05 16:02:19,845 [16] INFO  Jwtex.JwtExController - files found: 1
+2015-04-05 16:05:00,678 [12] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-04-05 16:05:00,679 [12] INFO  Jwtex.JwtExController - files found: 5
+2015-04-05 16:12:00,116 [18] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-04-05 16:12:00,140 [18] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 16:13:58,540 [17] INFO  Jwtex.JwtExController - name:comLayout, mode:Layouts
+2015-04-05 16:13:58,541 [17] INFO  Jwtex.JwtExController - files found: 2
+2015-04-05 16:14:26,252 [19] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-04-05 16:14:26,253 [19] INFO  Jwtex.JwtExController - files found: 3
+2015-04-05 17:24:26,797 [30] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-04-05 17:24:26,798 [30] INFO  Jwtex.JwtExController - files found: 5
+2015-04-05 17:32:02,401 [25] INFO  Jwtex.JwtExController - name:testModuleWidget, mode:Widgets
+2015-04-05 17:32:02,403 [25] INFO  Jwtex.JwtExController - files found: 3

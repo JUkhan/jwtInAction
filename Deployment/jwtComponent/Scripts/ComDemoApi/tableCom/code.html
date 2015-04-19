@@ -1,0 +1,22 @@
+﻿<pre>
+&lt;div table-com data="vm.list" column-def="vm.columnDef" &gt; &lt;/div&gt;
+<code>
+ loadData(){
+    this.columnDef=[{field:'Country'}, {field:'Name', displayName:'Person Name'},{field:'Age'},
+    {field:'IsMarried', template:'&lt;input type="checkbox" ng-model="row.IsMarried" disabled /&gt;'},
+    {field:'Beloved', template:'&lt;b&gt;{{row.Beloved}}&lt;/b&gt;&lt;span spark data="row.sparkData">&lt;/span&gt;'}
+                    ];
+     
+    let dataConfig={limit:20, columns:[
+        {name:'Country', type:'country'},
+        {name:'Name', type:'human'},
+        {name:'Age', type:'int', min:20, max:100},
+        {name:'IsMarried', type:'bool'},
+        {name:'Beloved', type:'animal'},{name:'sparkData', type:'int', array:true, limit:12, min:1, max:10}
+    ]};      
+      
+    SVC.get(this).getDummyData(dataConfig)
+    .success(res=>{ this.list=angular.fromJson(res.data); });
+}
+</code>
+</pre>
