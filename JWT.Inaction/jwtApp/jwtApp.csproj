@@ -280,6 +280,8 @@
     <Content Include="Scripts\Directives\tableCom\tableCom.html" />
     <Content Include="Scripts\Directives\tableCom\tableCom.js" />
     <Content Include="Scripts\Filters\jwtDate.js" />
+    <Content Include="Scripts\highcharts-ng.js" />
+    <Content Include="Scripts\highstock.src.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\jquery.sparkline.js" />
