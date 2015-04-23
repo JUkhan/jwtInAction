@@ -53,3 +53,5 @@
 2015-04-19 12:56:01,200 [7] INFO  Jwtex.JwtExController - files found: 5
 2015-04-19 13:00:14,094 [23] INFO  Jwtex.JwtExController - name:undefined, mode:Base
 2015-04-19 13:00:14,118 [23] INFO  Jwtex.JwtExController - files found: 5
+2015-04-23 14:43:45,585 [9] INFO  Jwtex.JwtExController - name:home, mode:Widgets
+2015-04-23 14:43:45,819 [9] INFO  Jwtex.JwtExController - files found: 3
