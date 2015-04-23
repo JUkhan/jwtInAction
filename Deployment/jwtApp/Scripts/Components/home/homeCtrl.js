@@ -7,7 +7,7 @@ class homeCtrl extends BaseCtrl
 		SVC.set(this, svc);
 		this.title='home';
       	this.loadData();
-      	this.chartTypes = [
+      	 this.chartTypes = [
                 {"id": "line", "title": "Line"},
                 {"id": "spline", "title": "Smooth line"},
                 {"id": "area", "title": "Area"},

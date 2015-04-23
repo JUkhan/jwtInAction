@@ -326,6 +326,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\jwtComponent.pubxml" />
     <None Include="Properties\PublishProfiles\jwtComponents.pubxml" />
   </ItemGroup>
   <PropertyGroup>
