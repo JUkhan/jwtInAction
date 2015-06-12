@@ -12,6 +12,7 @@ namespace STS.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(STS.AuthContext context)
@@ -31,16 +32,16 @@ namespace STS.Migrations
             List<Client> ClientsList = new List<Client> 
             {
                 new Client
-                { Id = "jwtApp", 
+                {   Id = "jwtApp", 
                     Secret= Helper.GetHash("jwtabc@123"), 
                     Name="AngularJS front-end Application", 
                     ApplicationType =  Models.ApplicationTypes.JavaScript, 
                     Active = true, 
                     RefreshTokenLifeTime = 7200, 
-                    AllowedOrigin = "http://dacw0066/"
+                    AllowedOrigin = "http://localhost/"
                 },
                 new Client
-                { Id = "nativeApp", 
+                {   Id = "nativeApp", 
                     Secret=Helper.GetHash("jwt123@abc"), 
                     Name="Mobile Application", 
                     ApplicationType =Models.ApplicationTypes.NativeConfidential, 
@@ -49,7 +50,6 @@ namespace STS.Migrations
                     AllowedOrigin = "*"
                 }
             };
-
             return ClientsList;
         }
     }

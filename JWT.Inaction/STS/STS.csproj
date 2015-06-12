@@ -122,7 +122,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -133,9 +135,9 @@
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\RefreshToken.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="Migrations\201407121205456_AddClientsAndRefreshTokenTables.cs" />
-    <Compile Include="Migrations\201407121205456_AddClientsAndRefreshTokenTables.Designer.cs">
-      <DependentUpon>201407121205456_AddClientsAndRefreshTokenTables.cs</DependentUpon>
+    <Compile Include="Migrations\201506070715236_DBVersion1.cs" />
+    <Compile Include="Migrations\201506070715236_DBVersion1.Designer.cs">
+      <DependentUpon>201506070715236_DBVersion1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enums.cs" />
@@ -164,8 +166,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201407121205456_AddClientsAndRefreshTokenTables.resx">
-      <DependentUpon>201407121205456_AddClientsAndRefreshTokenTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506070715236_DBVersion1.resx">
+      <DependentUpon>201506070715236_DBVersion1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

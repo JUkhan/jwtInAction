@@ -1,15 +1,15 @@
 import BaseSvc from 'Scripts/base/BaseSvc.js';
-const HTTP=new WeakMap();
+
 class homeSvc extends BaseSvc
 {
 	constructor(http, ngAuthSettings){
 		super(http);
-		HTTP.set(this, http);
+	    this.http=http;
       	this.baseUrl=ngAuthSettings.apiServiceBaseUri;
 	}
   	getData(){
        
-        return HTTP.get(this).get(this.baseUrl+'api/orders');
+        return this.http.get(this.baseUrl+'api/orders');
   
     }
 	static homeFactory(http, ngAuthSettings)	{

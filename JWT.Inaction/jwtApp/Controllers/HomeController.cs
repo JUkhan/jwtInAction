@@ -9,7 +9,7 @@ namespace jwtApp.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index()
-        {
+        {          
             if (!Request.Path.EndsWith("/"))
                 return RedirectPermanent(Request.Url.ToString() + "/");
             return View();
