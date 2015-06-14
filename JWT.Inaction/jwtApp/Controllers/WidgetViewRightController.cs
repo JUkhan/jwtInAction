@@ -49,8 +49,8 @@ namespace jwtApp.Controllers
             }
         }
         [Authorize(Roles = "Admin")]
-        [Route("create")]
-        public async Task<IHttpActionResult> Create(WidgetViewRight widget)
+        [Route("createItem")]
+        public async Task<IHttpActionResult> CreateItem(WidgetViewRight widget)
         {
 
             using (ApplicationDbContext dbContext = ApplicationDbContext.Create())
@@ -61,8 +61,8 @@ namespace jwtApp.Controllers
             return Ok();
         }
         [Authorize(Roles = "Admin")]
-        [Route("update")]
-        public async Task<IHttpActionResult> Update(WidgetViewRight widget)
+        [Route("updateItem")]
+        public async Task<IHttpActionResult> UpdateItem(WidgetViewRight widget)
         {
 
             using (ApplicationDbContext dbContext = ApplicationDbContext.Create())
@@ -82,8 +82,8 @@ namespace jwtApp.Controllers
             return Ok();
         }
         [Authorize(Roles = "Admin")]
-        [Route("delete")]
-        public async Task<IHttpActionResult> Delete(WidgetViewRight widget)
+        [Route("removeItem")]
+        public async Task<IHttpActionResult> RemoveItem(WidgetViewRight widget)
         {
             using (ApplicationDbContext dbContext = ApplicationDbContext.Create())
             {

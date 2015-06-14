@@ -10,8 +10,7 @@ namespace jwtApp.Infrastructure
     {
         public int Id { get; set; }
 
-        [MaxLength(128)]
-        [Required]
+        [MaxLength(128)]       
         public string RoleId { get; set; }
 
         [MaxLength(128)]       

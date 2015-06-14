@@ -1,2 +1,59 @@
 
-<grid options="vm.wvrListOptions" data="vm.wvrList"></grid>
+<br>
+
+<div ng-show="vm.isGrid">
+    <button ng-click="vm.add()" class="btn btn-primary" type="submit">Add</button>
+    <grid options="vm.wvrListOptions" data="vm.wvrList"></grid>
+</div>
+
+<div ng-hide="vm.isGrid">
+    <form class="form-horizontal well" name="jwtForm">
+        <div class="form-group" ng-class="{error: jwtForm.widgetName.$invalid}">
+            <label for="widgetName" class="control-label col-xs-2">Widgets</label>
+            <div class="col-xs-4">
+                 <select ng-options="s.widgetId as s.widgetName for s in vm.widgetList"  name="widgetName" id="widgetName" ng-model="vm.wvr.widgetName" ></select>	
+                <span ng-show="jwtForm.widgetName.$error.required" class="help-inline">Required</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="roles" class="control-label col-xs-2">Roles</label>
+            <div class="col-xs-4">
+                <select ng-options="s.name as s.roleId for s in vm.roles"  id="roles" ng-model="vm.wvr.roleId" ></select>	
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="users" class="control-label col-xs-2">Users</label>
+            <div class="col-xs-4">
+                <select ng-options="s.name as s.userId for s in vm.users"  id="users" ng-model="vm.wvr.userId" ></select>	
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <div class="checkbox">
+                    <label><input ng-checked="vm.wvr.create" ng-model="vm.wvr.create" type="checkbox"> Create</label> 
+                </div>
+               
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-4">
+                <div class="checkbox">
+                    <label><input ng-checked="vm.wvr.update" ng-model="vm.wvr.update" type="checkbox"> Update</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-4">
+                <div class="checkbox">
+                    <label><input ng-checked="vm.wvr.delete" ng-model="vm.wvr.delete" type="checkbox"> Delete</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-4">
+                <button ng-click="vm.save(vm.wvr)" ng-disabled="jwtForm.$invalid" type="button"  class="btn btn-primary">Save</button>
+                <button ng-click="vm.cancel()" type="button" class="btn btn-error">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

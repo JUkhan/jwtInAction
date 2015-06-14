@@ -19,14 +19,14 @@ class WidgetViewRightsSvc extends BaseSvc
 	getRoles(){
 	     return HTTP.get(this).get(this.apiServiceBaseUri+'api/widgetRight/getRoles');
 	}
-	createUVR(){
-	     return HTTP.get(this).get(this.apiServiceBaseUri+'api/widgetRight/create');
+	createUVR(item){
+	     return HTTP.get(this).post(this.apiServiceBaseUri+'api/widgetRight/createItem', item);
 	}
-	updateUVR(){
-	     return HTTP.get(this).get(this.apiServiceBaseUri+'api/widgetRight/update');
+	updateUVR(item){
+	     return HTTP.get(this).post(this.apiServiceBaseUri+'api/widgetRight/updateItem', item);
 	}
-	removeUVR(){
-	     return HTTP.get(this).get(this.apiServiceBaseUri+'api/widgetRight/delete');
+	removeUVR(item){
+	     return HTTP.get(this).post(this.apiServiceBaseUri+'api/widgetRight/removeItem', item);
 	}
 	static widgetViewRightsFactory(http, ngAuthSettings)	{
 		return new WidgetViewRightsSvc(http, ngAuthSettings);

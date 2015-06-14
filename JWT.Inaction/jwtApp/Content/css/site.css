@@ -80,3 +80,6 @@ body {
     z-index: 1001;
     background-color:silver;
 }
+ .form-horizontal .control-label{
+        padding-top: 7px;
+    }

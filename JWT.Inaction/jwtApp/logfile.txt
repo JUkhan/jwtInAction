@@ -135,3 +135,5 @@
 2015-06-14 16:48:24,587 [32] INFO  Jwtex.JwtExController - files found: 5
 2015-06-14 16:49:31,897 [48] INFO  Jwtex.JwtExController - name:WidgetViewRights, mode:Widgets
 2015-06-14 16:49:31,898 [48] INFO  Jwtex.JwtExController - files found: 3
+2015-06-14 21:57:38,696 [39] INFO  Jwtex.JwtExController - name:home, mode:Widgets
+2015-06-14 21:57:38,909 [39] INFO  Jwtex.JwtExController - files found: 3
