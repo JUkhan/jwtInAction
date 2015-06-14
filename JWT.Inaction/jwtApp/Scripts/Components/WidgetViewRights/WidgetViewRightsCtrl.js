@@ -7,11 +7,21 @@ class WidgetViewRightsCtrl extends BaseCtrl
 		SVC.set(this, svc);
 		this.title='WidgetViewRights';
 		
+		this.lostOptions();
+	    this.loadData();
 	
-		svc.getWidgets().success(res=>{console.log(res)})
-		svc.getUsers().success(res=>{console.log(res)})
-		svc.getRoles().success(res=>{console.log(res)})
-		svc.getWidgetViewRights().success(res=>{console.log(res)})
+	}
+	lostOptions(){
+	    this.wvrListOptions={
+	      loadingText:'Loading...'  
+	    };
+	}
+	loadData(){
+	    var me=this;
+	    SVC.get(me).getWidgets().success(res=>{console.log(res)});
+    	SVC.get(me).getUsers().success(res=>{console.log(res)});
+    	SVC.get(me).getRoles().success(res=>{console.log(res)});
+    	SVC.get(me).getWidgetViewRights().success(res=>{me.wvrList=res; me.wvrListOptions.loadingText='';});
 	}
 }
 WidgetViewRightsCtrl.$inject=['$scope', 'WidgetViewRightsSvc'];
