@@ -9,9 +9,12 @@ class signupCtrl
       	this.savedSuccessfully = false;
    		this.message = "";
         this.registration = {
-          userName: "",
-          password: "",
-          confirmPassword: ""
+          userName: "Jasim",
+          password: "Jasim@ripon",
+          confirmPassword: "Jasim@ripon",
+          firstName:'jasim',
+          lastName:'khan', 
+          email:'jasimuddinkhan@gmail.com'
         };
 	}
   

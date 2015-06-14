@@ -9,5 +9,6 @@ export default function config(stateprovider, routeProvider){
 	stateprovider.state('root.signup',{url:'/signup',templateUrl:'Scripts/Components/signup/signup.html',controller:'signupCtrl as vm'});
 	stateprovider.state('associate',{url:'/associate',templateUrl:'Scripts/Components/associate/associate.html',controller:'associateCtrl as vm'});
 	stateprovider.state('root.chartNav',{url:'/chartNav',templateUrl:'Scripts/Components/chatWidget/chatWidget.html',controller:'chatWidgetCtrl as vm'});
+	stateprovider.state('root.WidgetViewNav',{url:'/WidgetViewNav',templateUrl:'Scripts/Components/WidgetViewRights/WidgetViewRights.html',controller:'WidgetViewRightsCtrl as vm'});
 }
 config.$inject=['$stateProvider', '$urlRouterProvider'];

@@ -35,3 +35,5 @@ Install-Package log4net
 Install-Package Microsoft.Owin.Host.SystemWeb -Version 3.0.0
 Install-Package Microsoft.Owin.Cors -Version 3.0.0
 Install-Package Microsoft.Owin.Security.OAuth -Version 2.1.0
+////////////
+Install-Package Thinktecture.IdentityModel.Core -Version 1.2.0.0
