@@ -349,6 +349,9 @@
     <Content Include="Scripts\Components\login\loginCtrl.js" />
     <Content Include="Scripts\Components\signup\signup.html" />
     <Content Include="Scripts\Components\signup\signupCtrl.js" />
+    <Content Include="Scripts\Components\WidgetViewRights\WidgetViewRights.html" />
+    <Content Include="Scripts\Components\WidgetViewRights\WidgetViewRightsCtrl.js" />
+    <Content Include="Scripts\Components\WidgetViewRights\WidgetViewRightsSvc.js" />
     <Content Include="Scripts\config.js" />
     <Content Include="Scripts\d3.min.js" />
     <Content Include="Scripts\Directives\jwtFilter\jwtFilter.js" />

@@ -58,7 +58,7 @@ namespace jwtApp.Controllers
                 dbContext.WidgetViewRights.Add(widget);
                 await dbContext.SaveChangesAsync();
             }
-            return Ok();
+            return Ok(widget.Id);
         }
         [Authorize(Roles = "Admin")]
         [Route("updateItem")]

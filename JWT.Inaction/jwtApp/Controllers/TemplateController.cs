@@ -15,11 +15,10 @@ namespace jwtApp.Controllers
         [Route("template/{name}")]
         public async Task GetTemplate(string name)
         {
-
-            name = name.ToLower();
+            
             string filePath = GetFilePath(name);
             Response.ContentType = "text/html";
-           
+            name = name.ToLower();
             if (!System.IO.File.Exists(filePath))
             {
                 Response.Write("<div class=\"not-found\">Template file not found.</div>");
@@ -75,6 +74,11 @@ namespace jwtApp.Controllers
             if (!root.EndsWith("\\"))
             {
                 root += "\\";
+            }
+            if (name.EndsWith("__LAYOUT__"))
+            {
+                name = name.Substring(0,name.LastIndexOf("__LAYOUT__"));
+                return root + string.Format("Scripts\\Layouts\\{0}\\{0}.html", name);
             }
             return root + string.Format("Scripts\\Components\\{0}\\{0}.html", name);
         }

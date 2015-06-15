@@ -41,6 +41,7 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	    this.isGrid=false;
 	    this.wvr={widgetName: "", roleId: "", serId: "", create: false, update: false, delete: false};
 	    this.isUpdate=false;
+	    this.wvrListOptions.loadingText="";
 	}
 	cancel(){
 	    this.isGrid=true;
@@ -50,32 +51,30 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	      this.isUpdate=true;
 	      this.wvr=row;
 	      this.isGrid=false;
+	      this.wvrListOptions.loadingText="";
 	  });
 	}
 	remove(row, index){
 	    if(confirm('Are you sure to remove this item?')){
 	         SVC.get(this).removeUVR(row).success(res=>{
-	              this.scope.$apply(()=>{
-	                   this.wvrListOptions.loadingText="deleted";
-	              });
+	              this.arrayRemove(this.wvrList, item=>item.id==row.id);
+	              this.wvrListOptions.loadingText="deleted";
 	         });
 	    }
 	}
 	save(item){
 	    if(!this.isUpdate){
-	        SVC.get(this).createUVR(item).success(()=>{
-	             this.scope.$apply(()=>{
-	                  this.isGrid=true;
-	                  this.wvrListOptions.loadingText="inserted";
-	             });
+	        SVC.get(this).createUVR(item).success((id)=>{
+              item.id=id;
+              this.isGrid=true;
+              this.wvrList.push(item);
+              this.wvrListOptions.loadingText="inserted";
+	           
 	        });
 	    }else{
 	         SVC.get(this).updateUVR(item).success(res=>{
-	             
-	              this.scope.$apply(()=>{
-	                   this.isGrid=true;
-	                   //this.wvrListOptions.loadingText="updated";
-	              });
+	             this.isGrid=true;
+	             this.wvrListOptions.loadingText="updated";
 	         });
 	    }
 	}

@@ -38,5 +38,14 @@ class BaseCtrl{
             }
         })();
     }
+    arrayRemove(list, callback){
+       
+        var fx = function (arr) { return list.length; };
+        for (var i = 0; i < fx(list) ; i++) {
+            if (callback(list[i])) { list.splice(i, 1); i--; }
+        }
+        return list;
+   
+    }
 }
 export default BaseCtrl;
