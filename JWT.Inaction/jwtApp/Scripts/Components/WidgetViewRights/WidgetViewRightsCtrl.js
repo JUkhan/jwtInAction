@@ -20,7 +20,7 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	      loadingText:'Loading...',
 	      columns:[
 	          {field:'action', displayName:'Action', linkText:['Edit','Delete'],  onClick:[this.edit.bind(this),this.remove.bind(this)]},
-	          {field:'widgetName', displayName:'Widget Name', sort:true},
+	          {field:'widgetName', displayName:'Widget Name', sort:true, render:row=>{return row.widgetName.replace('__LAYOUT__','');}},
 	          {field:'roleId', displayName:'Role', sort:true},
 	          {field:'userId', displayName:'User', sort:true},
 	          {field:'create', displayName:'Create', render:row=>{return '<input type="checkbox" '+(row.create?'checked':'')+' disabled/>';}},
@@ -63,6 +63,9 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	    }
 	}
 	save(item){
+	    if(!this.valid(item)){
+	        return;
+	    }
 	    if(!this.isUpdate){
 	        SVC.get(this).createUVR(item).success((id)=>{
               item.id=id;
@@ -77,6 +80,16 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	             this.wvrListOptions.loadingText="updated";
 	         });
 	    }
+	}
+	valid(item){
+	    var res=false;
+	    if(item.widgetName){
+	       res=true; 
+	    }
+	    else if(item.roleId || item.userId){
+	        res=true;
+	    }
+	    return res;
 	}
 }
 WidgetViewRightsCtrl.$inject=['$scope', 'WidgetViewRightsSvc'];

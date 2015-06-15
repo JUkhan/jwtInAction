@@ -112,7 +112,19 @@ namespace jwtApp.Controllers
             {
                 list.Add(item.Name);
             }
+
+            path = AppDomain.CurrentDomain.BaseDirectory + "\\Scripts\\Layouts";
+            dir = new DirectoryInfo(path);
+            List<string> layouts = new List<string>();
+            foreach (var item in dir.GetDirectories())
+            {
+                layouts.Add(item.Name);
+            }
             var temp = (from u in list select new { WidgetId = u, WidgetName = u }).ToList();
+            foreach (var item in layouts)
+            {
+                temp.Add(new { WidgetId = item + "__LAYOUT__", WidgetName =item });
+            }
             return Ok(temp);
         }
     }

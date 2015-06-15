@@ -7,14 +7,14 @@ class signupCtrl
        	this.authService=authService;
       
       	this.savedSuccessfully = false;
-   		this.message = "";
+   		this.message = '';
         this.registration = {
-          userName: "Jasim",
-          password: "Jasim@ripon",
-          confirmPassword: "Jasim@ripon",
-          firstName:'jasim',
-          lastName:'khan', 
-          email:'jasimuddinkhan@gmail.com'
+          userName:'',
+          password: '',
+          confirmPassword: '',
+          firstName:'',
+          lastName:'', 
+          email:''
         };
 	}
   
