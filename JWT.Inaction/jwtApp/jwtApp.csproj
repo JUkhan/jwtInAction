@@ -349,6 +349,9 @@
     <Content Include="Scripts\Components\login\loginCtrl.js" />
     <Content Include="Scripts\Components\signup\signup.html" />
     <Content Include="Scripts\Components\signup\signupCtrl.js" />
+    <Content Include="Scripts\Components\userInRoles\userInRoles.html" />
+    <Content Include="Scripts\Components\userInRoles\userInRolesCtrl.js" />
+    <Content Include="Scripts\Components\userInRoles\userInRolesSvc.js" />
     <Content Include="Scripts\Components\WidgetViewRights\WidgetViewRights.html" />
     <Content Include="Scripts\Components\WidgetViewRights\WidgetViewRightsCtrl.js" />
     <Content Include="Scripts\Components\WidgetViewRights\WidgetViewRightsSvc.js" />
@@ -369,6 +372,7 @@
     <Content Include="Scripts\jquery.sparkline.js" />
     <Content Include="Scripts\Layouts\root\root.html" />
     <Content Include="Scripts\Layouts\root\rootCtrl.js" />
+    <Content Include="Scripts\Layouts\root\rootSvc.js" />
     <Content Include="Scripts\loading-bar.min.js" />
     <Content Include="Scripts\Modules\jwtComponents\jwtComponents.css" />
     <Content Include="Scripts\Modules\jwtComponents\jwtComponents.js" />

@@ -10,6 +10,9 @@ class userInRolesSvc extends BaseSvc
 	getAllRoles(){
 	     return HTTP.get(this).get(this.apiServiceBaseUri+'api/roles/');
 	}
+	removeUser(id){
+	    return HTTP.get(this).delete(this.apiServiceBaseUri+'api/account/user/'+id);
+	}
 	addRole(name){
 	     return HTTP.get(this).post(this.apiServiceBaseUri+'api/roles/create',{name:name});
 	}

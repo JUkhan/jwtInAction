@@ -14,14 +14,14 @@ class signupCtrl
           confirmPassword: '',
           firstName:'',
           lastName:'', 
-          email:''
+          email:'', phoneNumber:''
         };
 	}
   
   	signUp() {
       
       	let that=this;
-
+        
         that.authService.saveRegistration(that.registration).then(function (response) {
 
             that.savedSuccessfully = true;

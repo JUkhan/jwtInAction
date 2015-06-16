@@ -3,11 +3,17 @@
            
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    
                     <li ui-sref-active="active"><a ui-sref="root.home">Home</a></li> 
-                    <li ui-sref-active="active"><a ui-sref="root.WidgetViewNav">Widget View Rights</a></li> 
-                    <li ui-sref-active="active"><a ui-sref="root.userInRoles">User In Roles</a></li> 
-                
-                  
+                    <li class="dropdown" ng-show="vm.hasAuthorize">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Authorize <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li ui-sref-active="active"><a ui-sref="root.WidgetViewNav">Widget View Rights</a></li> 
+                              <li ui-sref-active="active"><a ui-sref="root.userInRoles">User In Roles</a></li> 
+                            
+                          </ul>
+                    </li>
+                   
                 </ul>
               	<ul class="nav navbar-nav navbar-right">
                    <li data-ng-show="vm.authentication.isAuth" ui-sref-active="active">

@@ -14,10 +14,20 @@ class userInRolesCtrl extends BaseCtrl
 	            {field:'userName', displayName:'User Name', sort:true, onClick:this.showRolesDetail.bind(this)},
 	            {field:'fullName', displayName:'Full Name', sort:true},
 	            {field:'email', displayName:'Email', sort:true},
-	             {field:'email', displayName:'Roles', sort:true, render:this.getClaimsString}
+	            {field:'email', displayName:'Roles', sort:true, render:this.getClaimsString},
+	            {field:'email', displayName:'Action', linkText:'Remove', onClick:this.removeUser.bind(this)}
 	            ]
 	    };
 	    this.currentUser=null;
+	}
+	removeUser(row){
+	     if(confirm('Are you sure to remove \''+row.userName+'\'?')){
+	         SVC.get(this).removeUser(row.id).success(res=>{
+	             this.arrayRemove(this.users, user=>user.id==row.id);
+	              this.showMsg('User \''+row.userName+'\' removed successfully.');
+	              this.updateGrid();
+	         });
+	     }
 	}
 	getClaimsString(row){
 	    var temp=[];
@@ -28,7 +38,7 @@ class userInRolesCtrl extends BaseCtrl
 	}
 	loadData(){
 	    SVC.get(this).getAllRoles().success(res=>{ this.roles=res; });
-	    SVC.get(this).getAllUsers().success(res=>{ this.users=res; this.options.loadingText='done'; });
+	    SVC.get(this).getAllUsers().success(res=>{ this.users=res; this.updateGrid(); });
 	    
 	}
 	addRole(roleName){
@@ -51,7 +61,7 @@ class userInRolesCtrl extends BaseCtrl
 	     });
 	}
     removeClaim(claim){
-        if(confirm('Are you sure to remove this role.')){
+        if(confirm('Are you sure to remove this role?')){
             SVC.get(this).removeClaimFromUser(this.currentUser.id, claim).success(res=>{
                  this.arrayRemove(this.currentUser.claims, item=>item.value==claim);
                  this.updateGrid();
