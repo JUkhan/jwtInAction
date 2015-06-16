@@ -1,13 +1,20 @@
 
 <br>
-
+<div ng-show="vm.msg" class="alert alert-info" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      <b>{{vm.msg}}</b>
+ </div>
 <div ng-show="vm.isGrid">
     <button ng-click="vm.add()" class="btn btn-primary" type="submit">Add</button>
     <grid options="vm.wvrListOptions" data="vm.wvrList"></grid>
 </div>
 
 <div ng-hide="vm.isGrid">
-    <form class="form-horizontal well" name="jwtForm">
+     <div class="panel panel-default">
+            <div class="panel-heading">Widget View Right</div>
+            <br>
+    <form class="form-horizontal" name="jwtForm">
         <div class="form-group">
             <label for="widgetName" class="control-label col-xs-2">Widgets</label>
             <div class="col-xs-4">
@@ -55,4 +62,5 @@
             </div>
         </div>
     </form>
+    </div>
 </div>

@@ -159,3 +159,77 @@
 2015-06-15 22:38:22,818 [76] INFO  jwt.internals.jwtAppManager - login
 2015-06-15 22:41:17,986 [71] INFO  Jwtex.JwtExController - name:signup, mode:Widgets
 2015-06-15 22:41:17,988 [71] INFO  Jwtex.JwtExController - files found: 2
+2015-06-16 08:08:46,253 [8] INFO  Jwtex.JwtExController - name:userInRoles, mode:Widgets
+2015-06-16 08:08:46,278 [8] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 08:13:58,805 [8] INFO  Jwtex.JwtExController - name:root, mode:Layouts
+2015-06-16 08:13:58,806 [8] INFO  Jwtex.JwtExController - files found: 2
+2015-06-16 08:30:44,104 [44] INFO  Jwtex.JwtExController - name:WidgetViewRights, mode:Widgets
+2015-06-16 08:30:44,105 [44] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 08:30:44,242 [48] ERROR Jwtex.JwtExController - System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents)
+   at jwt.CodeGen.JwtFile.Write(String path, String content)
+   at Jwtex.JwtExController.SaveFile(String mode, String directoryName, String fileName, String content)
+2015-06-16 08:31:06,217 [51] INFO  Jwtex.JwtExController - name:userInRoles, mode:Widgets
+2015-06-16 08:31:06,218 [51] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 08:36:51,344 [61] INFO  Jwtex.JwtExController - name:userInRoles, mode:Widgets
+2015-06-16 08:36:51,345 [61] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 08:36:55,894 [62] ERROR Jwtex.JwtExController - System.IO.FileNotFoundException: Could not find file 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\userInRoles\WidgetViewRightsSvc.js'.
+File name: 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\userInRoles\WidgetViewRightsSvc.js'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at jwt.CodeGen.JwtFile.Read(String path)
+   at Jwtex.JwtExController.GetFileContent(String mode, String directoryName, String fileName)
+2015-06-16 11:28:31,215 [62] INFO  Jwtex.JwtExController - name:WidgetViewRights, mode:Widgets
+2015-06-16 11:28:31,322 [62] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 11:34:52,927 [46] INFO  Jwtex.JwtExController - name:userInRoles, mode:Widgets
+2015-06-16 11:34:52,929 [46] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 11:34:52,967 [44] ERROR Jwtex.JwtExController - System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\WidgetViewRightsCtrl\WidgetViewRightsCtrl.js'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents)
+   at jwt.CodeGen.JwtFile.Write(String path, String content)
+   at Jwtex.JwtExController.SaveFile(String mode, String directoryName, String fileName, String content)
+2015-06-16 12:09:05,259 [62] INFO  Jwtex.JwtExController - name:WidgetViewRights, mode:Widgets
+2015-06-16 12:09:05,260 [62] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 12:30:51,575 [48] ERROR Jwtex.JwtExController - System.IO.FileNotFoundException: Could not find file 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\userInRoles\WidgetViewRightsCtrl.js'.
+File name: 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\userInRoles\WidgetViewRightsCtrl.js'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at jwt.CodeGen.JwtFile.Read(String path)
+   at Jwtex.JwtExController.GetFileContent(String mode, String directoryName, String fileName)
+2015-06-16 12:31:29,272 [46] INFO  Jwtex.JwtExController - name:userInRoles, mode:Widgets
+2015-06-16 12:31:29,288 [46] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 12:31:41,618 [44] ERROR Jwtex.JwtExController - System.IO.FileNotFoundException: Could not find file 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\userInRoles\s'.
+File name: 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Components\userInRoles\s'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   at System.IO.File.ReadAllText(String path)
+   at jwt.CodeGen.JwtFile.Read(String path)
+   at Jwtex.JwtExController.GetFileContent(String mode, String directoryName, String fileName)
+2015-06-16 14:34:18,146 [60] INFO  Jwtex.JwtExController - name:WidgetViewRights, mode:Widgets
+2015-06-16 14:34:18,177 [60] INFO  Jwtex.JwtExController - files found: 3
+2015-06-16 14:44:49,388 [9] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-06-16 14:44:49,389 [9] INFO  Jwtex.JwtExController - files found: 5
+2015-06-16 14:45:01,321 [20] INFO  Jwtex.JwtExController - name:signup, mode:Widgets
+2015-06-16 14:45:01,322 [20] INFO  Jwtex.JwtExController - files found: 2

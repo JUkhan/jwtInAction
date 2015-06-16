@@ -18,7 +18,7 @@ namespace AspNetIdentity.WebApi.Controllers
     public class AccountsController : BaseApiController
     {
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("users")]
         public IHttpActionResult GetUsers()
         {
@@ -28,7 +28,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return Ok(this.AppUserManager.Users.ToList().Select(u => this.TheModelFactory.Create(u)));
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("user/{id:guid}", Name = "GetUserById")]
         public async Task<IHttpActionResult> GetUser(string Id)
         {
@@ -44,7 +44,7 @@ namespace AspNetIdentity.WebApi.Controllers
 
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("user/{username}")]
         public async Task<IHttpActionResult> GetUserByName(string username)
         {
@@ -128,7 +128,7 @@ namespace AspNetIdentity.WebApi.Controllers
             if (result.Succeeded)
             {
                 //return Ok();
-                string path = string.IsNullOrEmpty(ConfigurationManager.AppSettings["EmailConfirmedRedirectTo"]) ? Request.RequestUri.OriginalString.Replace(Request.RequestUri.PathAndQuery, "") : ConfigurationManager.AppSettings["EmailConfirmedRedirectTo"];              
+                string path = string.IsNullOrEmpty(ConfigurationManager.AppSettings["EmailConfirmedRedirectTo"]) ? Request.RequestUri.OriginalString.Replace(Request.RequestUri.PathAndQuery, "") : ConfigurationManager.AppSettings["EmailConfirmedRedirectTo"];
                 return Redirect(new Uri(path));
             }
             else
@@ -156,7 +156,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("user/{id:guid}")]
         public async Task<IHttpActionResult> DeleteUser(string id)
         {
@@ -182,7 +182,7 @@ namespace AspNetIdentity.WebApi.Controllers
 
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("user/{id:guid}/roles")]
         [HttpPut]
         public async Task<IHttpActionResult> AssignRolesToUser([FromUri] string id, [FromBody] string[] rolesToAssign)
@@ -234,7 +234,7 @@ namespace AspNetIdentity.WebApi.Controllers
 
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("user/{id:guid}/assignclaims")]
         [HttpPut]
         public async Task<IHttpActionResult> AssignClaimsToUser([FromUri] string id, [FromBody] List<ClaimBindingModel> claimsToAssign)
@@ -266,7 +266,7 @@ namespace AspNetIdentity.WebApi.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         [Route("user/{id:guid}/removeclaims")]
         [HttpPut]
         public async Task<IHttpActionResult> RemoveClaimsFromUser([FromUri] string id, [FromBody] List<ClaimBindingModel> claimsToRemove)
@@ -294,6 +294,61 @@ namespace AspNetIdentity.WebApi.Controllers
 
             return Ok();
         }
+        #region MyRegion
+        [Authorize(Roles = "Admin,SuperAdmin")]
+        [Route("user/{id:guid}/assignclaim")]
+        [HttpPut]
+        public async Task<IHttpActionResult> AssignClaimToUser([FromUri] string id, [FromBody] ClaimBindingModel claimModel)
+        {
 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var appUser = await this.AppUserManager.FindByIdAsync(id);
+
+            if (appUser == null)
+            {
+                return NotFound();
+            }
+
+            if (appUser.Claims.Any(c => c.ClaimType == claimModel.Type))
+            {
+
+                await this.AppUserManager.RemoveClaimAsync(id, ExtendedClaimsProvider.CreateClaim(claimModel.Type, claimModel.Value));
+            }
+
+            await this.AppUserManager.AddClaimAsync(id, ExtendedClaimsProvider.CreateClaim(claimModel.Type, claimModel.Value));
+
+            return Ok();
+        }
+
+        [Authorize(Roles = "Admin,SuperAdmin")]
+        [Route("user/{id:guid}/removeclaim")]
+        [HttpPut]
+        public async Task<IHttpActionResult> RemoveClaimFromUser([FromUri] string id, [FromBody] ClaimBindingModel claimModel)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var appUser = await this.AppUserManager.FindByIdAsync(id);
+
+            if (appUser == null)
+            {
+                return NotFound();
+            }
+
+            if (appUser.Claims.Any(c => c.ClaimType == claimModel.Type))
+            {
+                await this.AppUserManager.RemoveClaimAsync(id, ExtendedClaimsProvider.CreateClaim(claimModel.Type, claimModel.Value));
+            }
+
+            return Ok();
+        }
+        #endregion
     }
 }

@@ -2,11 +2,11 @@ import BaseCtrl from 'Scripts/Base/BaseCtrl.js';
 const SVC=new WeakMap();
 class WidgetViewRightsCtrl extends BaseCtrl
 {
-	constructor(scope, svc){
+	constructor(scope, svc, timeout){
 		super(scope);
 		SVC.set(this, svc);
 		this.scope=scope;
-		
+		this.timeout=timeout;
 		this.listOptions();
 	    this.loadData();
 	    this.wvr={};
@@ -59,11 +59,12 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	         SVC.get(this).removeUVR(row).success(res=>{
 	              this.arrayRemove(this.wvrList, item=>item.id==row.id);
 	              this.wvrListOptions.loadingText="deleted";
+	               this.showMsg('Removed successfully');
 	         });
 	    }
 	}
 	save(item){
-	    if(!this.valid(item)){
+	    if(!this.isValid(item)){
 	        return;
 	    }
 	    if(!this.isUpdate){
@@ -72,25 +73,35 @@ class WidgetViewRightsCtrl extends BaseCtrl
               this.isGrid=true;
               this.wvrList.push(item);
               this.wvrListOptions.loadingText="inserted";
-	           
+	            this.showMsg('Added successfully');
 	        });
 	    }else{
 	         SVC.get(this).updateUVR(item).success(res=>{
 	             this.isGrid=true;
 	             this.wvrListOptions.loadingText="updated";
+	              this.showMsg('Updated successfully');
 	         });
 	    }
 	}
-	valid(item){
-	    var res=false;
-	    if(item.widgetName){
-	       res=true; 
+    isValid(item){
+	    
+	    if(!item.widgetName){
+	        this.showMsg('Please select a widget name.');
+	      return false
 	    }
-	    else if(item.roleId || item.userId){
-	        res=true;
+	    if(!(item.roleId || item.userId)){
+	        this.showMsg('Please select a role or user name');
+	        res=false;
 	    }
-	    return res;
+	    return true;
 	}
+	showMsg(msg) {
+	    this.msg=msg;
+        var that=this, timer = that.timeout(function () {
+            that.timeout.cancel(timer);
+           	that.msg='';
+        }, 2000);
+    }
 }
-WidgetViewRightsCtrl.$inject=['$scope', 'WidgetViewRightsSvc'];
+WidgetViewRightsCtrl.$inject=['$scope', 'WidgetViewRightsSvc', '$timeout'];
 export default WidgetViewRightsCtrl;
