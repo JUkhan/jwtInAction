@@ -40,14 +40,18 @@ namespace jwtApp.Migrations
             if (roleManager.Roles.Count() == 0)
             {
                 roleManager.Create(new IdentityRole { Name = "SuperAdmin" });
-                roleManager.Create(new IdentityRole { Name = "Admin"});
-                roleManager.Create(new IdentityRole { Name = "User"});
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
             }
 
             var adminUser = manager.FindByName("admin");
-
-            manager.AddToRole(adminUser.Id,  "SuperAdmin");
-            manager.AddToRole(adminUser.Id, "Admin");
+            var claims = manager.GetClaims(adminUser.Id);
+            if (claims != null && claims.Count() == 0)
+            {
+                manager.AddClaim(adminUser.Id, new System.Security.Claims.Claim("role", "Admin"));
+            }
+           // manager.AddToRole(adminUser.Id,  "SuperAdmin");
+           // manager.AddToRole(adminUser.Id, "Admin");
 
             if (context.WidgetViewRights.Count() == 0)
             {
@@ -60,7 +64,43 @@ namespace jwtApp.Migrations
                     Update = true,
                     Delete = true
                 };
+
+                var userInRoles = new WidgetViewRight
+                {
+                    WidgetName = "userInRoles",
+                    RoleId = "Admin",
+                    OnlyView = true,
+                    Create = true,
+                    Update = true,
+                    Delete = true
+                };
+
+              var  home = new WidgetViewRight
+                {
+                    WidgetName = "home",
+                    RoleId = "User",
+                    OnlyView = true,
+                    Create = true,
+                    Update = true,
+                    Delete = true
+                };
+               
+
+                var root = new WidgetViewRight
+                {
+                    WidgetName = "root__LAYOUT__",
+                    RoleId = "User",
+                    OnlyView = true,
+                    Create = true,
+                    Update = true,
+                    Delete = true
+                };
+               
                 context.WidgetViewRights.Add(widgetViewRight);
+                context.WidgetViewRights.Add(userInRoles);
+                context.WidgetViewRights.Add(home);
+                context.WidgetViewRights.Add(root);
+
                 context.SaveChanges();
             }
         }

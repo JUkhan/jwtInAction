@@ -423,6 +423,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="jwtApp.config" />
     <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\authJwtApp.pubxml" />
     <None Include="Properties\PublishProfiles\jwtApp.pubxml" />
   </ItemGroup>
   <PropertyGroup>

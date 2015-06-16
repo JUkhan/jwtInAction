@@ -44,7 +44,7 @@ namespace AspNetIdentity.WebApi.Controllers
 
         }
 
-        [Authorize(Roles = "Admin,SuperAdmin")]
+        [Authorize]
         [Route("user/{username}")]
         public async Task<IHttpActionResult> GetUserByName(string username)
         {
