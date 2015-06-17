@@ -64,3 +64,6 @@
     border: none;
     border-style: none;
 }
+.jwt-grid .tgrid thead tr td{
+   padding:0px; 
+}

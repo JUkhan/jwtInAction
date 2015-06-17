@@ -96,7 +96,7 @@ var JwtGrid = React.createClass({displayName: "JwtGrid",
         	React.createElement("span", {style: {width:'220px'}, className: pos}, 
 		      React.createElement("input", {type: "text", ref: "txtSearch", onKeyDown: this.onSearchChane, className: "form-control", placeholder: "Search for..."}), 
 		      React.createElement("span", {className: "input-group-btn"}, 
-		        React.createElement("button", {className: "btn btn-default", onClick: this.onSearch, type: "button"}, "Go!")
+		        React.createElement("button", {className: "btn btn-default", onClick: this.onSearch, type: "button"}, React.createElement("span", {className: "glyphicon glyphicon-search"}), " Search")
 		      )
 		    )		    
   		)

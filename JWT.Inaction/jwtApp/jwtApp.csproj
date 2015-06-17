@@ -382,9 +382,6 @@
     <Content Include="Scripts\Modules\jwtComponents\Pager.js" />
     <Content Include="Scripts\Modules\jwtComponents\Row.js" />
     <Content Include="Scripts\Modules\jwtComponents\SparkLine.js" />
-    <Content Include="Scripts\Modules\jwtComponents\TheRow.js" />
-    <Content Include="Scripts\Modules\jwtComponents\TreeGrid.js" />
-    <Content Include="Scripts\Modules\jwtComponents\TRow.js" />
     <Content Include="Scripts\Modules\testModule\testModule.js" />
     <Content Include="Scripts\Modules\testModule\testService.js" />
     <Content Include="Scripts\nv.d3.js" />

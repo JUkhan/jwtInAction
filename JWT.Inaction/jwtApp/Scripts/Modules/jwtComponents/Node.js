@@ -30,23 +30,19 @@ var Node=React.createClass({displayName: "Node",
   render: function(){
      var that=this;       
      if(that.state.isExpanded) {
+     	that.icon='minus';
       return React.createElement("tr", null, 
         React.createElement("td", {colSpan: that.props.options.columns.length, className: "child-td"}, 
           React.createElement("table", {className: "tgrid"}, 
             React.createElement("tbody", null, 
 
-                   [React.createElement("tr", {key: that.props.index, className: 'level-'+that.props.data.Level}, 
-                      that.props.options.columns.map(function(col, id){        
-                    if(col.onClick){                    
-                      return React.createElement("td", {key: id, className: col.className, style: col.style}, React.createElement("span", {onClick: that.expand, className: "indented"}, "-"), that.getLinks(that.props.data, col, that.props.index))
-                    }                         
-                     return React.createElement("td", {key: id, className: col.className, style: col.style}, React.createElement("span", {onClick: that.expand, className: "indented"}, "-"), that.props.data[col.field])              
-               
-                    })
+                   [React.createElement("tr", {key: that.props.index, className: 'level-'+that.props.level},                       
+					
+					that.props.options.columns.map(that.renderRow)
                    ),
-                    that.props.data.ChildList.map(function(row, index){
+                    that.props.data[that.props.options.childListName].map(function(row, index){
            
-                         return React.createElement(Node, {key: index+that.props.index+1, options: that.props.options, data: row, index: index})
+                         return React.createElement(Node, {key: index+that.props.index+1, level: that.props.level+1, options: that.props.options, data: row, index: index})
                     })]
              
             )
@@ -56,17 +52,18 @@ var Node=React.createClass({displayName: "Node",
      
      }
      else{
-           return React.createElement("tr", {key: that.props.index, className: 'level-'+that.props.data.Level}, that.props.options.columns.map(that.renderRow))
+     	that.icon='plus';          
+        return React.createElement("tr", {key: that.props.index, className: 'level-'+that.props.level}, that.props.options.columns.map(that.renderRow))
      }
      
   },
   renderRow:function(col, id){   
-   
-    if(id==0 && this.props.data.ChildList && this.props.data.ChildList.length>0){
+   var icon='indented glyphicon glyphicon-'+this.icon+'-sign'
+    if(id==0 && this.props.options.childListName && this.props.data[this.props.options.childListName] && this.props.data[this.props.options.childListName].length>0){
           if(col.onClick){                    
-            return React.createElement("td", {key: id, className: col.className, style: col.style}, React.createElement("span", {onClick: this.expand, className: "indented"}, "+"), this.getLinks(this.props.data, col, this.props.index))
+            return React.createElement("td", {key: id, className: col.className, style: col.style}, React.createElement("span", {onClick: this.expand, className: icon}), " ", this.getLinks(this.props.data, col, this.props.index))
           }
-          return React.createElement("td", {key: id, className: col.className, style: col.style}, React.createElement("span", {onClick: this.expand, className: "indented"}, "+"), this.props.data[col.field])
+          return React.createElement("td", {key: id, className: col.className, style: col.style}, React.createElement("span", {onClick: this.expand, className: icon}), " ", this.props.data[col.field])
       }
       else{
         if(col.spark){

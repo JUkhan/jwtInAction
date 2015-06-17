@@ -96,7 +96,7 @@ var JwtTreeGrid = React.createClass({displayName: "JwtTreeGrid",
           React.createElement("span", {style: {width:'220px'}, className: pos}, 
           React.createElement("input", {type: "text", ref: "txtSearch", onKeyDown: this.onSearchChane, className: "form-control", placeholder: "Search for..."}), 
           React.createElement("span", {className: "input-group-btn"}, 
-            React.createElement("button", {className: "btn btn-default", onClick: this.onSearch, type: "button"}, "Go!")
+            React.createElement("button", {className: "btn btn-default", onClick: this.onSearch, type: "button"}, React.createElement("span", {className: "glyphicon glyphicon-search"}), " Search")
           )
         )       
       )
@@ -125,10 +125,11 @@ var JwtTreeGrid = React.createClass({displayName: "JwtTreeGrid",
     var that=this;
     return (
             React.createElement("div", {className: "jwt-grid"}, 
-             React.createElement("div", {className: "well"}, pager, "  ", this.getFilter(options)), 
+             
             React.createElement("table", {className: options.className}, 
-                React.createElement("thead", null, 
-                    React.createElement("tr", null, 
+                React.createElement("thead", null, [
+                	React.createElement("tr", {key: "1"}, React.createElement("td", {colSpan: options.columns.length}, " ", React.createElement("div", {className: "well"}, pager, "  ", this.getFilter(options)))),
+                    React.createElement("tr", {key: "2"}, 
                     
                         options.columns.map(function(col, index){
                             if(col.style){
@@ -141,11 +142,12 @@ var JwtTreeGrid = React.createClass({displayName: "JwtTreeGrid",
                         })
                     
                     )
+                ]
                 ), 
                 React.createElement("tbody", null, 
                 
                      this.state.data.map(function(row, index){
-                          return React.createElement(Node, {key: index, options: options, data: row, index: index})
+                          return React.createElement(Node, {key: index, level: 1, options: options, data: row, index: index})
                      })   
                         
                 
