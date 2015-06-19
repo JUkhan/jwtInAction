@@ -26,7 +26,7 @@ namespace jwtApp.Controllers
                     {
                         return Json(JsonConvert.SerializeObject(await CommonRepository.GetTableData(spModel)));
                     }
-                    return Json(new { msg = "Not Authorized." });
+                    return Json(new { msg = string.Format("'{0}' is not authorized.",spModel.spName) });
                 }
                 return Json(JsonConvert.SerializeObject(await CommonRepository.GetTableData(spModel)));
             }
@@ -45,9 +45,9 @@ namespace jwtApp.Controllers
                     {
                         return Json(JsonConvert.SerializeObject(await CommonRepository.GetTableData(spModel)));
                     }
-                    return Json(new { msg = "Not Authorized." });
+                    return Json(new { msg = string.Format("'{0}' is not authorized.", spModel.spName) });
                 }
-                return Json(await CommonRepository.GetScalerValue(spModel));
+                return Json(await CommonRepository.GetScalarValue(spModel));
             }
             catch (Exception ex)
             {

@@ -39,7 +39,7 @@ namespace jwtApp.Models
             }
             return Task.FromResult<DataTable>(dt);
         }
-        public static Task<object> GetScalerValue(SpModel spModel)
+        public static Task<object> GetScalarValue(SpModel spModel)
         {
             object res = null;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCONN"].ConnectionString))
