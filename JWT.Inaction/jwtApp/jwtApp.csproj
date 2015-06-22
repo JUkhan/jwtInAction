@@ -376,6 +376,8 @@
     <Content Include="Scripts\loading-bar.min.js" />
     <Content Include="Scripts\Modules\jwtComponents\jwtComponents.css" />
     <Content Include="Scripts\Modules\jwtComponents\jwtComponents.js" />
+    <Content Include="Scripts\Modules\jwtComponents\JwtForm.js" />
+    <Content Include="Scripts\Modules\jwtComponents\JwtFormGrid.js" />
     <Content Include="Scripts\Modules\jwtComponents\JwtGrid.js" />
     <Content Include="Scripts\Modules\jwtComponents\JwtTreeGrid.js" />
     <Content Include="Scripts\Modules\jwtComponents\Node.js" />
