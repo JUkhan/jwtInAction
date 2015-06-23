@@ -1,12 +1,13 @@
+
 import BaseCtrl from 'Scripts/Base/BaseCtrl.js';
-const SVC=new WeakMap();
+
 class chatWidgetCtrl extends BaseCtrl
 {
 	constructor(scope, svc){
 		super(scope);
-		SVC.set(this, svc);
+		this.svc=svc;
 		this.title='chatWidget';
-      	 this.salesData = [
+      	this.salesData = [
     {hour: 1,sales: 54},
     {hour: 2,sales: 66},
     {hour: 3,sales: 77},

@@ -1,25 +1,24 @@
+
 import BaseCtrl from 'Scripts/Base/BaseCtrl.js';
-const SVC=new WeakMap();
+import JwtFormGrid from 'Scripts/Modules/jwtComponents/JwtFormGrid.js';
+
 class WidgetViewRightsCtrl extends BaseCtrl
 {
 	constructor(scope, svc, timeout){
 		super(scope);
-		SVC.set(this, svc);
+		this.svc=svc;
 		this.scope=scope;
 		this.timeout=timeout;
-		this.listOptions();
 	    this.loadData();
-	    this.wvr={};
-	    
+	    this.setFormGridOptions();
 	}
-	listOptions(){
-	   
-	    this.isGrid=true;
-	    this.wvrListOptions={
-	        filter:true,
-	      loadingText:'Loading...',
+	setFormGridOptions(){
+	    var me=this;
+	    var grid={
+	        filter:true,limit:15,
+	      loadingText:'Loading...',newItem:()=>{me.formGrid.showForm().formRefresh(); }, newItemText:'Add New Widget Permission',
 	      columns:[
-	          {field:'action', displayName:'Action', linkText:['Edit','Delete'],  onClick:[this.edit.bind(this),this.remove.bind(this)]},
+	          {field:'action', displayName:'Action', linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
 	          {field:'widgetName', displayName:'Widget Name', sort:true, render:row=>{return row.widgetName.replace('__LAYOUT__','');}},
 	          {field:'roleId', displayName:'Role', sort:true},
 	          {field:'userId', displayName:'User', sort:true},
@@ -29,36 +28,36 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	         
 	          ]
 	    };
+	    var form={
+	        title:'Widget Permission',
+	        formSubmit:function(data){
+	            me.save(data)  
+	        },
+	        formCancel:function(){
+	            me.formGrid.showGrid()
+	        },
+	        fields:[
+	            {type:'select', name:'widgetName', label:'Widgets', displayField:'widgetName', valueField:'widgetId', required:true},
+	            {type:'select', name:'roleId', label:'Roles',displayField:'name', valueField:'roleId',},
+	            {type:'select', name:'userId', label:'Users', displayField:'name', valueField:'userId',},
+	            {type:'checkboxInlines', label:'Permission', values:['create','update','delete']},
+	            ]
+	    };
+	    this.formGrid=React.render(React.createElement(JwtFormGrid, {gridOptions:grid, formOptions:form}), document.getElementById('formGrid'));
 	}
 	loadData(){
-	   
-	    SVC.get(this).getWidgets().success(res=>{this.widgetList=res; });
-    	SVC.get(this).getUsers().success(res=>{this.users=res;});
-    	SVC.get(this).getRoles().success(res=>{this.roles=res;});
-    	SVC.get(this).getWidgetViewRights().success(res=>{this.wvrList=res; this.wvrListOptions.loadingText=''; });
-	}
-	add(){
-	    this.isGrid=false;
-	    this.wvr={widgetName: "", roleId: "", serId: "", create: false, update: false, delete: false};
-	    this.isUpdate=false;
-	    this.wvrListOptions.loadingText="";
-	}
-	cancel(){
-	    this.isGrid=true;
-	}
-	edit(row, index){
-	  this.scope.$apply(()=>{
-	      this.isUpdate=true;
-	      this.wvr=row;
-	      this.isGrid=false;
-	      this.wvrListOptions.loadingText="";
-	  });
+	    
+	    this.svc.getWidgetViewRights().success(res=>{this.wvrList=res; this.formGrid.setGridData(res) });
+	    this.svc.getWidgets().success(res=>{this.widgetList=res; this.formGrid.setSelectOptions('widgetName', res); });
+    	this.svc.getUsers().success(res=>{ this.formGrid.setSelectOptions('userId', res); });
+    	this.svc.getRoles().success(res=>{ this.formGrid.setSelectOptions('roleId', res);});
+    	
 	}
 	remove(row, index){
 	    if(confirm('Are you sure to remove this item?')){
-	         SVC.get(this).removeUVR(row).success(res=>{
+	         this.svc.removeUVR(row).success(res=>{
 	              this.arrayRemove(this.wvrList, item=>item.id==row.id);
-	              this.wvrListOptions.loadingText="deleted";
+	               this.formGrid.setGridData(this.wvrList)
 	               this.showMsg('Removed successfully');
 	         });
 	    }
@@ -67,31 +66,28 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	    if(!this.isValid(item)){
 	        return;
 	    }
-	    if(!this.isUpdate){
-	        SVC.get(this).createUVR(item).success((id)=>{
+	    if(!item.id){
+	        this.svc.createUVR(item).success((id)=>{
               item.id=id;
-              this.isGrid=true;
               this.wvrList.push(item);
-              this.wvrListOptions.loadingText="inserted";
-	            this.showMsg('Added successfully');
+              this.formGrid.setGridData(this.wvrList);
+	          this.showMsg('Added successfully');
+	          this.formGrid.showGrid()
 	        });
 	    }else{
-	         SVC.get(this).updateUVR(item).success(res=>{
-	             this.isGrid=true;
-	             this.wvrListOptions.loadingText="updated";
+	         this.svc.updateUVR(item).success(res=>{
+	              this.formGrid.setGridData(this.wvrList)
 	              this.showMsg('Updated successfully');
+	              this.formGrid.showGrid()
 	         });
 	    }
 	}
     isValid(item){
 	    
-	    if(!item.widgetName){
-	        this.showMsg('Please select a widget name.');
-	      return false
-	    }
 	    if(!(item.roleId || item.userId)){
-	        this.showMsg('Please select a role or user name');
-	        res=false;
+	        this.showMsg('Please select a role or user.');
+	        this.scope.$apply()
+	        return false;
 	    }
 	    return true;
 	}

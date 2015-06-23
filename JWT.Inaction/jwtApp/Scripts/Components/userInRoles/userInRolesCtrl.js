@@ -1,10 +1,10 @@
 import BaseCtrl from 'Scripts/Base/BaseCtrl.js';
-const SVC=new WeakMap();
+
 class userInRolesCtrl extends BaseCtrl
 {
 	constructor(scope, svc, timeout){
 		super(scope);
-		SVC.set(this, svc);
+		this.svc=svc;
 		this.timeout=timeout;
 		this.scope=scope;
 	    this.loadData();
@@ -22,7 +22,7 @@ class userInRolesCtrl extends BaseCtrl
 	}
 	removeUser(row){
 	     if(confirm('Are you sure to remove \''+row.userName+'\'?')){
-	         SVC.get(this).removeUser(row.id).success(res=>{
+	         this.svc.removeUser(row.id).success(res=>{
 	             this.arrayRemove(this.users, user=>user.id==row.id);
 	              this.showMsg('User \''+row.userName+'\' removed successfully.');
 	              this.updateGrid();
@@ -37,13 +37,13 @@ class userInRolesCtrl extends BaseCtrl
 	    return temp.join(',');
 	}
 	loadData(){
-	    SVC.get(this).getAllRoles().success(res=>{ this.roles=res; });
-	    SVC.get(this).getAllUsers().success(res=>{ this.users=res; this.updateGrid(); });
+	    this.svc.getAllRoles().success(res=>{ this.roles=res; });
+	    this.svc.getAllUsers().success(res=>{ this.users=res; this.updateGrid(); });
 	    
 	}
 	addRole(roleName){
 	    if(roleName){
-	        SVC.get(this).addRole(roleName).success(res=>{
+	        this.svc.addRole(roleName).success(res=>{
 	          
 	           this.roles.push(res);
 	           this.roleMsg='';
@@ -62,7 +62,7 @@ class userInRolesCtrl extends BaseCtrl
 	}
     removeClaim(claim){
         if(confirm('Are you sure to remove this role?')){
-            SVC.get(this).removeClaimFromUser(this.currentUser.id, claim).success(res=>{
+            this.svc.removeClaimFromUser(this.currentUser.id, claim).success(res=>{
                  this.arrayRemove(this.currentUser.claims, item=>item.value==claim);
                  this.updateGrid();
                  this.showMsg('Role removed successfully');
@@ -76,7 +76,7 @@ class userInRolesCtrl extends BaseCtrl
     assignClaimToUser(claimName){
         
         if(this.validateRole(claimName)){
-            SVC.get(this).assignClaimToUser(this.currentUser.id, claimName).success(res=>{
+            this.svc.assignClaimToUser(this.currentUser.id, claimName).success(res=>{
                 this.currentUser.claims.push({value:claimName});
                  this.updateGrid();
                 this.showMsg('Role assigned successfully');
