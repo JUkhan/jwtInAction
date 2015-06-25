@@ -241,6 +241,7 @@
   <ItemGroup>
     <Content Include="authComplete.html" />
     <Content Include="Content\components.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\loading-bar.css" />
@@ -391,6 +392,7 @@
     <Content Include="Scripts\react\ngReact.js" />
     <Content Include="Scripts\react\react.js" />
     <Content Include="Scripts\react\react.min.js" />
+    <Content Include="Scripts\typedarray.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -421,6 +423,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="jwtApp.config" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\authJwtApp.pubxml" />
     <None Include="Properties\PublishProfiles\jwtApp.pubxml" />

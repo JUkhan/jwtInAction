@@ -36,6 +36,14 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	        formCancel:function(){
 	            me.formGrid.showGrid()
 	        },
+	        validate:function(item, form){
+	            console.log(arguments)
+	             if(!(item.roleId || item.userId)){
+        	        form.showMessage('Please select a role or user.');
+        	        return false;
+        	    }
+        	    return true;
+	        },
 	        fields:[
 	            {type:'select', name:'widgetName', label:'Widgets', displayField:'widgetName', valueField:'widgetId', required:true},
 	            {type:'select', name:'roleId', label:'Roles',displayField:'name', valueField:'roleId',},
@@ -56,48 +64,31 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	remove(row, index){
 	    if(confirm('Are you sure to remove this item?')){
 	         this.svc.removeUVR(row).success(res=>{
-	              this.arrayRemove(this.wvrList, item=>item.id==row.id);
-	               this.formGrid.setGridData(this.wvrList)
-	               this.showMsg('Removed successfully');
+	                this.arrayRemove(this.wvrList, item=>item.id==row.id);
+	                this.formGrid.setGridData(this.wvrList)
+	                this.formGrid.showMessage('Removed successfully');
 	         });
 	    }
 	}
 	save(item){
-	    if(!this.isValid(item)){
-	        return;
-	    }
+	    
 	    if(!item.id){
 	        this.svc.createUVR(item).success((id)=>{
-              item.id=id;
-              this.wvrList.push(item);
-              this.formGrid.setGridData(this.wvrList);
-	          this.showMsg('Added successfully');
-	          this.formGrid.showGrid()
+                  item.id=id;
+                  this.wvrList.push(item);
+                  this.formGrid.setGridData(this.wvrList);
+    	          this.formGrid.showMessage('Added successfully');
+    	          this.formGrid.showGrid()
 	        });
 	    }else{
 	         this.svc.updateUVR(item).success(res=>{
 	              this.formGrid.setGridData(this.wvrList)
-	              this.showMsg('Updated successfully');
+	              this.formGrid.showMessage('Updated successfully');
 	              this.formGrid.showGrid()
 	         });
 	    }
 	}
-    isValid(item){
-	    
-	    if(!(item.roleId || item.userId)){
-	        this.showMsg('Please select a role or user.');
-	        this.scope.$apply()
-	        return false;
-	    }
-	    return true;
-	}
-	showMsg(msg) {
-	    this.msg=msg;
-        var that=this, timer = that.timeout(function () {
-            that.timeout.cancel(timer);
-           	that.msg='';
-        }, 2000);
-    }
+    
 }
 WidgetViewRightsCtrl.$inject=['$scope', 'WidgetViewRightsSvc', '$timeout'];
 export default WidgetViewRightsCtrl;
