@@ -14,7 +14,7 @@ using System.Web.Mvc;
 
 namespace jwtApp.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class RepositoryController : Controller
     {
         public async Task<JsonResult> GetTableData(SpModel spModel)
