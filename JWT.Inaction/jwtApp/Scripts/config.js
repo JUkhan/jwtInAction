@@ -11,5 +11,6 @@ export default function config(stateprovider, routeProvider){
 	stateprovider.state('root.chartNav',{url:'/chartNav',templateUrl:'template/chatWidget',controller:'chatWidgetCtrl as vm'});
 	stateprovider.state('root.WidgetViewNav',{url:'/WidgetViewNav',templateUrl:'template/WidgetViewRights',controller:'WidgetViewRightsCtrl as vm'});
 	stateprovider.state('root.userInRoles',{url:'/userInRoles',templateUrl:'template/userInRoles',controller:'userInRolesCtrl as vm'});
+	stateprovider.state('root.Person',{url:'/Person',templateUrl:'template/Person',controller:'PersonCtrl as vm'});
 }
 config.$inject=['$stateProvider', '$urlRouterProvider'];

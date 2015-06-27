@@ -6,6 +6,7 @@ import associate from 'Scripts/Components/associate/associateCtrl.js';
 import chatWidget from 'Scripts/Components/chatWidget/chatWidgetCtrl.js';
 import WidgetViewRights from 'Scripts/Components/WidgetViewRights/WidgetViewRightsCtrl.js';
 import userInRoles from 'Scripts/Components/userInRoles/userInRolesCtrl.js';
+import Person from 'Scripts/Components/Person/PersonCtrl.js';
 import root from 'Scripts/Layouts/root/rootCtrl.js';
 
 var moduleName='app.controllers';
@@ -18,6 +19,7 @@ angular.module(moduleName,[])
 .controller('chatWidgetCtrl', chatWidget)
 .controller('WidgetViewRightsCtrl', WidgetViewRights)
 .controller('userInRolesCtrl', userInRoles)
+.controller('PersonCtrl', Person)
 .controller('rootCtrl', root);
 
 export default moduleName;

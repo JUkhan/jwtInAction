@@ -29,9 +29,9 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	          ]
 	    };
 	    var form={
-	        title:'Widget Permission',
-	        formSubmit:function(data){
-	            me.save(data)  
+	        title:'Widget Permission', fileUpload:true,
+	        formSubmit:function(data, form){
+	            me.save(data);  
 	        },
 	        formCancel:function(){
 	            me.formGrid.showGrid()
@@ -48,7 +48,8 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	            {type:'select', name:'widgetName', label:'Widgets', displayField:'widgetName', valueField:'widgetId', required:true},
 	            {type:'select', name:'roleId', label:'Roles',displayField:'name', valueField:'roleId',},
 	            {type:'select', name:'userId', label:'Users', displayField:'name', valueField:'userId',},
-	            {type:'checkboxInlines', label:'Permission', values:['create','update','delete']},
+	            {type:'checkboxInlines', label:'Permission', values:['create','update','delete']}
+	           
 	            ]
 	    };
 	    this.formGrid=React.render(React.createElement(JwtFormGrid, {gridOptions:grid, formOptions:form}), document.getElementById('formGrid'));

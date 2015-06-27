@@ -83,3 +83,6 @@ body {
  .form-horizontal .control-label{
         padding-top: 7px;
     }
+ .not-auth{
+     margin-top:10px;
+ }

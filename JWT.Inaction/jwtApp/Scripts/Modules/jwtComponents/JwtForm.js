@@ -1,5 +1,4 @@
 
-
 var JwtForm=React.createClass({displayName: "JwtForm",
     getInitialState:function(){
         return {errors: {},  isHide:false, message:null}
@@ -132,6 +131,11 @@ var JwtForm=React.createClass({displayName: "JwtForm",
       }.bind(this))
       return data
     },
+    submit:function(options){
+        options.type='POST';
+        $(this.refs.form.getDOMNode()).ajaxForm(options);
+        $(this.refs.form.getDOMNode()).submit();
+    },
     render:function(){
       var options=this.props.options, msg;
       options.title=options.title||'Jwt Form';
@@ -149,7 +153,7 @@ var JwtForm=React.createClass({displayName: "JwtForm",
                   ), 
                    React.createElement("div", {className: "panel-body"}, 
                       msg, 
-                      React.createElement("div", {className: "form-horizontal"}, 
+                      React.createElement("form", {ref: "form", className: "form-horizontal", enctype: options.fileUpload?'multipart/form-data':null}, 
                           this.getFields(options)
                       )
                    ), 
@@ -192,9 +196,23 @@ var JwtForm=React.createClass({displayName: "JwtForm",
               case 'checkboxInlines':
                 return !field.hide && me.renderCheckboxInlines(field)
               break;
+              case 'hidden':
+                return !field.hide && me.renderHiddenInput(field)
+              break;
+              case 'file':
+                return !field.hide && me.renderFileInput(field)
+              break;
            }   
            return null
         })
+    },
+    renderHiddenInput:function(optionns){
+      return  React.createElement("input", {type: "hidden", id: options.name, ref: options.name})
+    },
+    renderFileInput: function(options) {
+      return this.renderField(options.name, options.label,
+        React.createElement("input", {type: "file", className: "form-control", name:options.name,  id: options.name, ref: options.name})
+      )
     },
     renderTextInput: function(options) {
       return this.renderField(options.name, options.label,
@@ -255,14 +273,14 @@ var JwtForm=React.createClass({displayName: "JwtForm",
   },
   renderCheckbox: function(options) {
       return this.renderField(options.name, options.label,
-        React.createElement("input", {type: "checkbox", className: "form-control", id: options.name, ref: options.name})
+        React.createElement("input", {type: "checkbox", className: "form-control", name: options.name, id: options.name, ref: options.name})
       )
   },
   renderCheckboxInlines: function(options) {
     var radios = options.values.map(function(value, index) {
       var defaultChecked = (value == options.defaultCheckedValue)
       return React.createElement("label", {key: index, className: "radio-inline"}, 
-        React.createElement("input", {type: "checkbox", ref: options.name + value, name: options.name+value, value: value, defaultChecked: defaultChecked}), 
+        React.createElement("input", {type: "checkbox", ref: options.name + value, value: value, defaultChecked: defaultChecked}), 
         options.labelList? options.labelList[index] : capitalize(value)
       )
     })

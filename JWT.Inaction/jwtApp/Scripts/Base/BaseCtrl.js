@@ -47,5 +47,12 @@ class BaseCtrl{
         return list;
    
     }
+    getParams(obj){
+        var paramList=[];
+        for(var key in obj){
+            paramList.push({name:key, value:obj[key]});
+        }
+        return paramList;
+    }
 }
 export default BaseCtrl;

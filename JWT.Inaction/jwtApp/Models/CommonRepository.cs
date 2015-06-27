@@ -13,7 +13,7 @@ namespace jwtApp.Models
     {
         public static Task<DataTable> GetTableData(SpModel spModel)
         {
-            DataTable dt = new DataTable();            
+            DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCONN"].ConnectionString))
             {
                 try
@@ -25,17 +25,16 @@ namespace jwtApp.Models
                     {
                         foreach (SpParam item in spModel.spParams)
                         {
-                            cmd.Parameters.AddWithValue('@'+item.name, item.value);
+                            cmd.Parameters.AddWithValue('@' + item.name, item.value);
                         }
 
                     }
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    {
-                        adapter.Fill(dt);
-                    }
+                    adapter.Fill(dt);
+
                 }
                 catch (Exception ex) { throw ex; }
-                
+
             }
             return Task.FromResult<DataTable>(dt);
         }
@@ -57,7 +56,7 @@ namespace jwtApp.Models
                         }
 
                     }
-                    res =  cmd.ExecuteScalarAsync().Result;
+                    res = cmd.ExecuteScalarAsync().Result;
                 }
                 catch (Exception ex) { throw ex; }
 

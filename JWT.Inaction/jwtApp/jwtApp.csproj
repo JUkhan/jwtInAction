@@ -194,6 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\" />
     <Folder Include="Views\Repository\" />
     <Folder Include="Views\Template\" />
   </ItemGroup>
@@ -368,6 +369,7 @@
     <Content Include="Scripts\Filters\jwtDate.js" />
     <Content Include="Scripts\highcharts-ng.js" />
     <Content Include="Scripts\highstock.src.js" />
+    <Content Include="Scripts\jquery.form.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\jquery.sparkline.js" />
