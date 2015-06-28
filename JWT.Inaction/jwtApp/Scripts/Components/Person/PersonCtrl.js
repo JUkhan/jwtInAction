@@ -4,9 +4,10 @@ import JwtFormGrid from 'Scripts/Modules/jwtComponents/JwtFormGrid.js';
 
 class PersonCtrl extends BaseCtrl
 {
-	constructor(scope, svc){
+	constructor(scope, svc, localStorageService){
 		super(scope);
 		this.svc = svc;
+		this.localStorageService=localStorageService;
 	
 	    this.setFormGridOptions();
 	    this.loadData();
@@ -57,23 +58,25 @@ class PersonCtrl extends BaseCtrl
 	}
 	
 	save(item, form){
-	   
+	    var authorizationData=this.localStorageService.get('authorizationData');
+	    console.log(authorizationData);
 	    var spParams=this.getParams({name:item.Name, email:item.Email, phone:item.Phone, path:item.Path});
 	    if(!item.Id){
 	        form.submit({
+	             beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Authorization", "Bearer " +authorizationData.token)
+                },
 	            url:'http://localhost:53954/Repository/FileUpload',
 	            data:{spName:'Person_Create', spParams:angular.toJson(spParams), path:'images'},
-	            success:function(res){
-	                console.log(res);
-	            }
-	        });
-	        /*this.svc.createUVR(item).success((id)=>{
-                  item.id=id;
+	            success:res=>{
+	              item.id=parseInt(res);
                   this.list.push(item);
                   this.formGrid.setGridData(this.list);
     	          this.formGrid.showMessage('Added successfully');
     	          this.formGrid.showGrid()
-	        });*/
+	            }
+	        });
+	        
 	    }else{
 	         this.svc.updateUVR(item).success(res=>{
 	              this.formGrid.setGridData(this.list)
@@ -92,5 +95,5 @@ class PersonCtrl extends BaseCtrl
 	    }
 	}
 }
-PersonCtrl.$inject=['$scope', 'PersonSvc'];
+PersonCtrl.$inject=['$scope', 'PersonSvc', 'localStorageService'];
 export default PersonCtrl;

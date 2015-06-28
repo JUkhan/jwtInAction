@@ -362,3 +362,19 @@ File name: 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Layouts\root\signup.h
 2015-06-27 10:25:40,527 [65] INFO  Jwtex.JwtExController - files found: 3
 2015-06-27 10:31:31,535 [72] INFO  Jwtex.JwtExController - name:jwtComponents, mode:Modules
 2015-06-27 10:31:31,536 [72] INFO  Jwtex.JwtExController - files found: 10
+2015-06-28 09:36:36,132 [9] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-06-28 09:36:36,455 [9] INFO  Jwtex.JwtExController - files found: 5
+2015-06-28 09:41:17,049 [14] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-06-28 09:41:17,050 [14] INFO  Jwtex.JwtExController - files found: 3
+2015-06-28 09:45:19,343 [25] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-06-28 09:45:19,344 [25] INFO  Jwtex.JwtExController - files found: 5
+2015-06-28 09:50:41,750 [41] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-06-28 09:50:41,751 [41] INFO  Jwtex.JwtExController - files found: 3
+2015-06-28 09:51:24,086 [43] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-06-28 09:51:24,087 [43] INFO  Jwtex.JwtExController - files found: 5
+2015-06-28 09:55:46,460 [40] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-06-28 09:55:46,461 [40] INFO  Jwtex.JwtExController - files found: 3
+2015-06-28 10:03:54,698 [37] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-06-28 10:03:54,699 [37] INFO  Jwtex.JwtExController - files found: 5
+2015-06-28 10:04:38,016 [37] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-06-28 10:04:38,018 [37] INFO  Jwtex.JwtExController - files found: 3
