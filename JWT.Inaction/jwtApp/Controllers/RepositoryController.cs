@@ -8,6 +8,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -19,6 +20,7 @@ namespace jwtApp.Controllers
     {
         public async Task<JsonResult> GetTableData(SpModel spModel)
         {
+            
             try
             {
                 if (IsEnableWidgetAuthorize())
@@ -147,30 +149,21 @@ namespace jwtApp.Controllers
             return "";
         }
 
-        //public async Task<ActionResult> ExportExcel(SpModel spModel)
-        //{
-            //We load the data
-            //var dataInventory = _inventoryService.InventoryListByPharmacyId(pId);
-            //string xml = String.Empty;
-            //XmlDocument xmlDoc = new XmlDocument();
+       
+        public async Task<ActionResult> ExportExcel(SpModel spModel, string fileName)
+        {
+            
+            DataTable dataTable = await CommonRepository.GetTableData(spModel);
+            string xml;
+            using (StringWriter sw = new StringWriter())
+            {
+                dataTable.WriteXml(sw);
+                xml = sw.ToString();
+            }
+            byte[] fileContents = Encoding.UTF8.GetBytes(xml);
 
-            //XmlSerializer xmlSerializer = new XmlSerializer(dataInventory.GetType());
+            return File(fileContents, "application/vnd.ms-excel", fileName);
 
-            //using (MemoryStream xmlStream = new MemoryStream())
-            //{
-            //    xmlSerializer.Serialize(xmlStream, dataInventory);
-            //    xmlStream.Position = 0;
-            //    xmlDoc.Load(xmlStream);
-            //    xml = xmlDoc.InnerXml;
-            //}
-
-            //var fName = string.Format("Inventory-{0}", DateTime.Now.ToString("s"));
-        //    DataTable data = await CommonRepository.GetTableData(spModel);
-           
-        //    byte[] fileContents = Encoding.UTF8.GetBytes(xml);
-
-        //    return File(fileContents, "application/vnd.ms-excel", fName);
-
-        //}
+        }
     }
 }

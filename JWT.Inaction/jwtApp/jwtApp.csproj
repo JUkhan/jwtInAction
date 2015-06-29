@@ -349,6 +349,9 @@
     <Content Include="Scripts\Components\home\homeSvc.js" />
     <Content Include="Scripts\Components\login\login.html" />
     <Content Include="Scripts\Components\login\loginCtrl.js" />
+    <Content Include="Scripts\Components\Person\Person.html" />
+    <Content Include="Scripts\Components\Person\PersonCtrl.js" />
+    <Content Include="Scripts\Components\Person\PersonSvc.js" />
     <Content Include="Scripts\Components\signup\signup.html" />
     <Content Include="Scripts\Components\signup\signupCtrl.js" />
     <Content Include="Scripts\Components\userInRoles\userInRoles.html" />
