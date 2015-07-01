@@ -20,7 +20,7 @@ namespace jwtApp.Controllers
     {
         public async Task<JsonResult> GetTableData(SpModel spModel)
         {
-            
+
             try
             {
                 if (IsEnableWidgetAuthorize())
@@ -78,7 +78,7 @@ namespace jwtApp.Controllers
                 var list = dbContext.WidgetViewRights.Where(widget => widget.WidgetName.ToLower() == widgetName && (roles.Contains(widget.RoleId) || widget.UserId == userName)).ToList();
                 if (list != null && list.Count > 0)
                 {
-                    
+
                     foreach (var item in list)
                     {
                         if (actionCreate && item.Create)
@@ -109,7 +109,7 @@ namespace jwtApp.Controllers
             List<SpParam> spParamList = JsonConvert.DeserializeObject<List<SpParam>>(spParams) ?? new List<SpParam>();
             string fileName = string.Empty;
             if (file != null)
-            { 
+            {
                 fileName = Guid.NewGuid().ToString();
 
                 string ext = file.FileName.Substring(file.FileName.LastIndexOf('.') + 1);
@@ -149,21 +149,63 @@ namespace jwtApp.Controllers
             return "";
         }
 
-       
-        public async Task<ActionResult> ExportExcel(SpModel spModel, string fileName)
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<ActionResult> ExportExcel(string spName, string spParams, string fileName)
         {
-            
-            DataTable dataTable = await CommonRepository.GetTableData(spModel);
-            string xml;
-            using (StringWriter sw = new StringWriter())
+            SpModel spModel = new SpModel();
+            spModel.spName = spName;
+            if (string.IsNullOrEmpty(spParams))
             {
-                dataTable.WriteXml(sw);
-                xml = sw.ToString();
+                spModel.spParams = JsonConvert.DeserializeObject<List<SpParam>>(spParams);
             }
-            byte[] fileContents = Encoding.UTF8.GetBytes(xml);
+            else
+            {
+                spModel.spParams = new List<SpParam>();
+            }
+            DataTable dataTable = await CommonRepository.GetTableData(spModel);
+            
+            byte[] fileContents = Encoding.UTF8.GetBytes(await GetXml(dataTable));
 
             return File(fileContents, "application/vnd.ms-excel", fileName);
+            
+        }
+      
+        private Task<string> GetXml(DataTable dt)
+        {
+            StringBuilder sb = new StringBuilder();
+            var worksheet_template = "<?xml version=\"1.0\"?><ss:Workbook xmlns:ss=\"urn:schemas-microsoft-com:office:spreadsheet\">" +
+             "<ss:Styles><ss:Style ss:ID=\"1\"><ss:Font ss:Bold=\"1\"/></ss:Style></ss:Styles><ss:Worksheet ss:Name=\"Sheet1\">" +
+             "<ss:Table>{{ROWS}}</ss:Table></ss:Worksheet></ss:Workbook>";
 
+            //table column names
+            sb.Append("<ss:Row ss:StyleID=\"1\">");
+            foreach (var item in dt.Columns)
+            {
+                sb.AppendFormat("<ss:Cell><ss:Data ss:Type=\"String\">{0}</ss:Data></ss:Cell>", item);
+            }
+            sb.Append("</ss:Row>");           
+            //column values
+            
+            foreach (DataRow  row in dt.Rows)
+            {
+                sb.AppendLine();
+                sb.Append("<ss:Row>");
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    if (row.IsNull(0))
+                    {
+                        sb.AppendFormat("<ss:Cell><ss:Data ss:Type=\"String\">{0}</ss:Data></ss:Cell>", "");
+                    }
+                    else
+                    {
+                        sb.AppendFormat("<ss:Cell><ss:Data ss:Type=\"String\">{0}</ss:Data></ss:Cell>", row[i].ToString());
+                    }
+                }
+                sb.Append("</ss:Row>");
+               
+            }
+            return Task.FromResult<string>(worksheet_template.Replace("{{ROWS}}", sb.ToString()));
         }
     }
 }

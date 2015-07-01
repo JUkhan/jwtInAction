@@ -12,7 +12,10 @@ class PersonCtrl extends BaseCtrl
 	    this.setFormGridOptions();
 	    this.loadData();
 	}
-	
+	exportExcel(){
+	   
+	    this.svc.exportExcel('Person_SelectAll', null, 'sample.xls');
+	}
 	setFormGridOptions(){
 	   
 	    var me=this;

@@ -11,17 +11,24 @@ class BaseSvc
     }
     get_1(spName, spParams){
         
-        if(spParams && typeof spParams !=='array'){
+        if(!angular.isArray(spParams)){
             spParams=this.getParams(spParams);
         }
          return  this.http.post('Repository/GetTableData',{spName:spName, spParams:spParams}); 
     }
     get_2(spName, spParams){
         
-         if(spParams && typeof spParams !=='array'){
+         if(!angular.isArray(spParams)){
             spParams=this.getParams(spParams);
          }
          return  this.http.post('Repository/getScalarValue',{spName:spName, spParams:spParams}); 
+    }
+    exportExcel(spName, spParams, fileName){
+        
+         if(!angular.isArray(spParams)){
+            spParams=  angular.toJson(this.getParams(spParams));
+         }
+       window.location='Repository/ExportExcel/?spName='+spName+'&spParams='+spParams+'&fileName='+fileName;
     }
     getParams(obj){
         var paramList=[];
