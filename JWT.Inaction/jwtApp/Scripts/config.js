@@ -12,5 +12,6 @@ export default function config(stateprovider, routeProvider){
 	stateprovider.state('root.WidgetViewNav',{url:'/WidgetViewNav',templateUrl:'template/WidgetViewRights',controller:'WidgetViewRightsCtrl as vm'});
 	stateprovider.state('root.userInRoles',{url:'/userInRoles',templateUrl:'template/userInRoles',controller:'userInRolesCtrl as vm'});
 	stateprovider.state('root.Person',{url:'/Person',templateUrl:'template/Person',controller:'PersonCtrl as vm'});
+	stateprovider.state('root.products',{url:'/products',templateUrl:'template/Products',controller:'ProductsCtrl as vm'});
 }
 config.$inject=['$stateProvider', '$urlRouterProvider'];

@@ -7,6 +7,7 @@ import chatWidget from 'Scripts/Components/chatWidget/chatWidgetCtrl.js';
 import WidgetViewRights from 'Scripts/Components/WidgetViewRights/WidgetViewRightsCtrl.js';
 import userInRoles from 'Scripts/Components/userInRoles/userInRolesCtrl.js';
 import Person from 'Scripts/Components/Person/PersonCtrl.js';
+import Products from 'Scripts/Components/Products/ProductsCtrl.js';
 import root from 'Scripts/Layouts/root/rootCtrl.js';
 
 var moduleName='app.controllers';
@@ -20,6 +21,7 @@ angular.module(moduleName,[])
 .controller('WidgetViewRightsCtrl', WidgetViewRights)
 .controller('userInRolesCtrl', userInRoles)
 .controller('PersonCtrl', Person)
+.controller('ProductsCtrl', Products)
 .controller('rootCtrl', root);
 
 export default moduleName;
