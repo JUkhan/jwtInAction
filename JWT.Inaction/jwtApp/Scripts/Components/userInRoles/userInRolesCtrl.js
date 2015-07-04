@@ -15,7 +15,7 @@ class userInRolesCtrl extends BaseCtrl
 	            {field:'fullName', displayName:'Full Name', sort:true},
 	            {field:'email', displayName:'Email', sort:true},
 	            {field:'email', displayName:'Roles', sort:true, render:this.getClaimsString},
-	            {field:'email', displayName:'Action', linkText:'Remove', onClick:this.removeUser.bind(this)}
+	            {field:'email', displayName:'Action', icon:'glyphicon glyphicon-remove', linkText:'Remove', onClick:this.removeUser.bind(this)}
 	            ]
 	    };
 	    this.currentUser=null;

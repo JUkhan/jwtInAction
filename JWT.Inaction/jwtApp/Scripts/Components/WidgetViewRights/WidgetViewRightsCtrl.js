@@ -18,14 +18,13 @@ class WidgetViewRightsCtrl extends BaseCtrl
 	        filter:true,limit:15,
 	      loadingText:'Loading...',newItem:()=>{me.formGrid.showForm().formRefresh(); }, newItemText:'Add New Widget Permission',
 	      columns:[
-	          {field:'action', displayName:'Action', linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
 	          {field:'widgetName', displayName:'Widget Name', sort:true, render:row=>{return row.widgetName.replace('__LAYOUT__','');}},
 	          {field:'roleId', displayName:'Role', sort:true},
 	          {field:'userId', displayName:'User', sort:true},
 	          {field:'create', displayName:'Create', render:row=>{return '<input type="checkbox" '+(row.create?'checked':'')+' disabled/>';}},
 	          {field:'update', displayName:'Update', render:row=>{return '<input type="checkbox" '+(row.update?'checked':'')+' disabled/>';}},
-	          {field:'delete', displayName:'Delete', render:row=>{return '<input type="checkbox" '+(row.delete?'checked':'')+' disabled/>';}}
-	         
+	          {field:'delete', displayName:'Delete', render:row=>{return '<input type="checkbox" '+(row.delete?'checked':'')+' disabled/>';}},
+	          {field:'action', displayName:'Action', icon:['glyphicon glyphicon-ok','glyphicon glyphicon-remove'], linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
 	          ]
 	    };
 	    var form={

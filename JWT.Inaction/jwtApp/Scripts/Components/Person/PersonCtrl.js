@@ -12,18 +12,15 @@ class PersonCtrl extends BaseCtrl
 	    this.setFormGridOptions();
 	    this.loadData();
 	}
-	exportExcel(){
-	   
-	    this.svc.exportExcel('Person_SelectAll', null, 'sample.xls');
-	}
+
 	setFormGridOptions(){
 	   
 	    var me=this;
 	     var grid={
-	        filter:true,limit:15,
+	        filter:true,limit:15,buttons:[{text:'Export', onClick:()=>{ this.svc.exportExcel('Person_SelectAll', null, 'sample.xls');}}],
 	      loadingText:'Loading...',newItem:()=>{me.formGrid.showForm().formRefresh(); }, newItemText:'Add New Person',
 	      columns:[
-	          {field:'action', displayName:'Action', linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
+	          {field:'action', displayName:'Action', icon:['glyphicon glyphicon-ok','glyphicon glyphicon-remove'], linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
 	          {field:'Name', displayName:'Name', sort:true},
 	          {field:'Email', displayName:'Email', sort:true},
 	          {field:'Phone', displayName:'Phone', sort:true},
@@ -69,7 +66,7 @@ class PersonCtrl extends BaseCtrl
 	             beforeSend: function (xhr) {
                         xhr.setRequestHeader("Authorization", "Bearer " +authorizationData.token)
                 },
-	            url:'http://localhost:53954/Repository/FileUpload',
+	            url:'http://localhost:8888/Repository/FileUpload',
 	            data:{spName:'Person_Create', spParams:angular.toJson(spParams), path:'images'},
 	            success:res=>{
 	              item.id=parseInt(res);
@@ -77,6 +74,9 @@ class PersonCtrl extends BaseCtrl
                   this.formGrid.setGridData(this.list);
     	          this.formGrid.showMessage('Added successfully');
     	          this.formGrid.showGrid()
+	            },
+	            error:(a,b,c,d)=>{
+	                console.log(a,b,c,d);
 	            }
 	        });
 	        

@@ -352,6 +352,9 @@
     <Content Include="Scripts\Components\Person\Person.html" />
     <Content Include="Scripts\Components\Person\PersonCtrl.js" />
     <Content Include="Scripts\Components\Person\PersonSvc.js" />
+    <Content Include="Scripts\Components\Products\Products.html" />
+    <Content Include="Scripts\Components\Products\ProductsCtrl.js" />
+    <Content Include="Scripts\Components\Products\ProductsSvc.js" />
     <Content Include="Scripts\Components\signup\signup.html" />
     <Content Include="Scripts\Components\signup\signupCtrl.js" />
     <Content Include="Scripts\Components\userInRoles\userInRoles.html" />

@@ -16,12 +16,12 @@ class ProductsCtrl extends BaseCtrl
 	setFormGridOptions(){
 	   // var me=this;
 	    var grid={
-	        filter:true,limit:15,
+	        filter:true,limit:15,checkList:(data)=>{ console.log(data);},
 	      loadingText:'Loading...',newItem:()=>{this.formGrid.showForm().formRefresh(); }, newItemText:'Add New Widget Permission',
 	      columns:[
-	          {field:'action', displayName:'Action', linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
 	          {field:'ProductName', displayName:'Product Name', sort:true },
-	          {field:'ProductCode', displayName:'Product Code', sort:true }
+	          {field:'ProductCode', displayName:'Product Code', sort:true },
+	          {field:'action', displayName:'Action', icon:['glyphicon glyphicon-ok','glyphicon glyphicon-remove'], linkText:['Edit','Delete'],  onClick:[row=>this.formGrid.setFormData(row), this.remove.bind(this)]},
 	         
 	          ]
 	    };

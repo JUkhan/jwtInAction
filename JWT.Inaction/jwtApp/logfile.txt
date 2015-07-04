@@ -402,3 +402,27 @@ File name: 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Layouts\root\signup.h
 2015-07-02 18:45:31,433 [18] INFO  Jwtex.JwtExController - files found: 3
 2015-07-02 18:45:48,685 [15] INFO  Jwtex.JwtExController - name:Products, mode:Widgets
 2015-07-02 18:45:48,686 [15] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 10:09:59,040 [9] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-07-04 10:09:59,105 [9] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 10:20:43,258 [16] INFO  Jwtex.JwtExController - name:Products, mode:Widgets
+2015-07-04 10:20:43,259 [16] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 10:25:03,080 [56] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-07-04 10:25:03,081 [56] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 10:31:51,018 [14] INFO  Jwtex.JwtExController - name:jwtComponents, mode:Modules
+2015-07-04 10:31:51,067 [14] INFO  Jwtex.JwtExController - files found: 10
+2015-07-04 10:43:42,785 [13] INFO  Jwtex.JwtExController - name:Products, mode:Widgets
+2015-07-04 10:43:42,813 [13] INFO  Jwtex.JwtExController - files found: 4
+2015-07-04 10:48:35,111 [28] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-07-04 10:48:35,113 [28] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 10:58:44,138 [24] INFO  Jwtex.JwtExController - name:undefined, mode:Base
+2015-07-04 10:58:44,139 [24] INFO  Jwtex.JwtExController - files found: 6
+2015-07-04 10:58:52,067 [24] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-07-04 10:58:52,069 [24] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 14:43:08,301 [23] INFO  Jwtex.JwtExController - name:Person, mode:Widgets
+2015-07-04 14:43:08,333 [23] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 14:43:33,069 [26] INFO  Jwtex.JwtExController - name:Products, mode:Widgets
+2015-07-04 14:43:33,070 [26] INFO  Jwtex.JwtExController - files found: 4
+2015-07-04 14:59:50,976 [37] INFO  Jwtex.JwtExController - name:WidgetViewRights, mode:Widgets
+2015-07-04 14:59:50,977 [37] INFO  Jwtex.JwtExController - files found: 3
+2015-07-04 15:02:03,640 [23] INFO  Jwtex.JwtExController - name:userInRoles, mode:Widgets
+2015-07-04 15:02:03,642 [23] INFO  Jwtex.JwtExController - files found: 3
