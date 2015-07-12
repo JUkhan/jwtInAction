@@ -389,9 +389,11 @@
     <Content Include="Scripts\Modules\jwtComponents\JwtFormGrid.js" />
     <Content Include="Scripts\Modules\jwtComponents\JwtGrid.js" />
     <Content Include="Scripts\Modules\jwtComponents\JwtTreeGrid.js" />
+    <Content Include="Scripts\Modules\jwtComponents\MultiSelect.js" />
     <Content Include="Scripts\Modules\jwtComponents\Node.js" />
     <Content Include="Scripts\Modules\jwtComponents\Pager.js" />
     <Content Include="Scripts\Modules\jwtComponents\Row.js" />
+    <Content Include="Scripts\Modules\jwtComponents\SelectItem.js" />
     <Content Include="Scripts\Modules\jwtComponents\SparkLine.js" />
     <Content Include="Scripts\Modules\testModule\testModule.js" />
     <Content Include="Scripts\Modules\testModule\testService.js" />
