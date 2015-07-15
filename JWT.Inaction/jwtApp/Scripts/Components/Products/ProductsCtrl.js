@@ -14,7 +14,6 @@ class ProductsCtrl extends BaseCtrl
 	}
 	
 	setFormGridOptions(){
-	   // var me=this;
 	    var grid={
 	        filter:true,limit:15,checkList:(data)=>{ console.log(data);},
 	      loadingText:'Loading...',newItem:()=>{this.formGrid.showForm().formRefresh(); }, newItemText:'Add New Widget Permission',

@@ -1,6 +1,6 @@
-import SparkLine from 'Scripts/Modules/jwtComponents/SparkLine.js';
+import JwtSparkLine from 'Scripts/Modules/jwtComponents/JwtSparkLine.js';
 
-var Node=React.createClass({displayName: "Node",
+var JwtNode=React.createClass({displayName: "JwtNode",
   getInitialState:function(){
     return {data:[], pageNo:1, dataStorage:null, isFilter:false, isExpanded:false}
   },
@@ -9,14 +9,14 @@ var Node=React.createClass({displayName: "Node",
   },   
    getLinks:function(row, col, index){
 
-    if(col.onClick && !(col.onClick instanceof Array)){
+    if(col.onClick && !Array.isArray(col.onClick)){
       col.onClick=[col.onClick];
     }
     var linkText=col.linkText;
     if(!linkText){
       linkText=row[col.field];
     }
-    if(!(linkText instanceof Array)){
+    if(!Array.isArray(linkText)){
       linkText=[linkText];
     }
     return  col.onClick.map(function(fx, id){return React.createElement("a", {key: id, className: "link indented", onClick: fx.bind(null,row, index), href: "javascript:;"}, linkText[id])})    
@@ -42,14 +42,14 @@ var Node=React.createClass({displayName: "Node",
                    ),
                     that.props.data[that.props.options.childListName].map(function(row, index){
            
-                         return React.createElement(Node, {key: index+that.props.index+1, level: that.props.level+1, options: that.props.options, data: row, index: index})
+                         return React.createElement(JwtNode, {key: index+that.props.index+1, level: that.props.level+1, options: that.props.options, data: row, index: index})
                     })]
              
             )
           )
         )
       )
-     
+     	
      }
      else{
      	that.icon='plus';          
@@ -67,7 +67,7 @@ var Node=React.createClass({displayName: "Node",
       }
       else{
         if(col.spark){
-            return React.createElement("td", {key: id, style: col.style}, React.createElement(SparkLine, {data: this.props.data[col.field], options: col.options}))
+            return React.createElement("td", {key: id, style: col.style}, React.createElement(JwtSparkLine, {data: this.props.data[col.field], options: col.options}))
         }
         if(col.render){
             return React.createElement("td", {key: id, dangerouslySetInnerHTML: {__html: col.render(this.props.data,this.props.index)}})
@@ -81,5 +81,5 @@ var Node=React.createClass({displayName: "Node",
   }
   
 });
-export default Node;
+export default JwtNode;
 

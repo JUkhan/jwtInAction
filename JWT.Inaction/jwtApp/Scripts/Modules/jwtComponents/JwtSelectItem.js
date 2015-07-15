@@ -1,4 +1,4 @@
-var SelectItem=React.createClass({displayName: "SelectItem",
+var JwtSelectItem=React.createClass({displayName: "JwtSelectItem",
   getInitialState:function(){
       return {data: []}
   },
@@ -11,7 +11,7 @@ var SelectItem=React.createClass({displayName: "SelectItem",
     var item=this.props.data;
     this.state.data=item;
     if(this.props.render){
-          return React.createElement("div", {className: "item"}, React.createElement("label", null, React.createElement("input", {checked: item['_chk_'], type: "checkbox"}), " ", React.createElement("span", {dangerouslySetInnerHTML: {__html: this.props.render(item,index)}})))
+          return React.createElement("div", {className: "item"}, React.createElement("label", null, React.createElement("input", {checked: item['_chk_'], onChange: this.checkItem, type: "checkbox"}), " ", React.createElement("span", {dangerouslySetInnerHTML: {__html: this.props.render(item, this.props.index)}})))
     }
     if(this.props.displayField){
           return React.createElement("div", {className: "item"}, React.createElement("label", null, React.createElement("input", {checked: item['_chk_'], onChange: this.checkItem, type: "checkbox"}), " ", item[this.props.displayField]))
@@ -19,4 +19,4 @@ var SelectItem=React.createClass({displayName: "SelectItem",
   }
   
 });
-export default SelectItem;
+export default JwtSelectItem;

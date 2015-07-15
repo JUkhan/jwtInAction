@@ -1,6 +1,6 @@
-import SelectItem from 'Scripts/Modules/jwtComponents/SelectItem.js';
-
-var MultiSelect=React.createClass({displayName: "MultiSelect",
+import JwtSelectItem from 'Scripts/Modules/jwtComponents/JwtSelectItem.js';
+import {cssClass} from 'Scripts/Modules/jwtComponents/JwtUtil.js';
+var JwtMultiSelect=React.createClass({displayName: "JwtMultiSelect",
   	getInitialState:function(){
         return {data: this.props.data, isHidden:true, txtSearch:'', dataStorage:this.props.data}
     },
@@ -135,7 +135,7 @@ var MultiSelect=React.createClass({displayName: "MultiSelect",
   			submit=React.createElement("div", null, React.createElement("input", {type: "button", className: "btn btn-default btn-block", value: "Submit", onClick: this.onSubmit}))
   		}
    		return React.createElement("div", {className: "multiselect", style: {minWidth:this.props.hwidth}}, 			
-   			React.createElement("div", {ref: "header", className: $class('header', {'has-error': this.props.hasError}), style: {width:this.props.hwidth}, onClick: this.onHeaderClick}, React.createElement("span", {ref: "selectedText"}, "0 selected"), 
+   			React.createElement("div", {ref: "header", className: cssClass('header', {'has-error': this.props.hasError}), style: {width:this.props.hwidth}, onClick: this.onHeaderClick}, React.createElement("span", {ref: "selectedText"}, "0 selected"), 
    				React.createElement("div", {className: "pull-right"}, React.createElement("span", {className: "glyphicon glyphicon-triangle-top", "aria-hidden": "true"}))
    			), 
    			React.createElement("div", {ref: "mscontent", className: "ms-content", style: {width:this.props.width}}, 
@@ -146,7 +146,7 @@ var MultiSelect=React.createClass({displayName: "MultiSelect",
    				React.createElement("div", {className: "item-content", style: {height:this.props.height}}, 
    				
    				me.state.data.map(function(itemData, index){
-   					return React.createElement(SelectItem, {key: index, data: itemData, displayField: me.props.displayField, render: me.props.render, checkItem: me.checkItem})
+   					return React.createElement(JwtSelectItem, {key: index, data: itemData, index: index, displayField: me.props.displayField, render: me.props.render, checkItem: me.checkItem})
    				})
    			), 
    			submit
@@ -155,20 +155,5 @@ var MultiSelect=React.createClass({displayName: "MultiSelect",
   	}
 });
 
-function $class(staticClassName, conditionalClassNames) {
-  var classNames = []
-  if (typeof conditionalClassNames == 'undefined') {
-    conditionalClassNames = staticClassName
-  }
-  else {
-    classNames.push(staticClassName)
-  }
-  for (var className in conditionalClassNames) {
-    if (!!conditionalClassNames[className]) {
-      classNames.push(className)
-    }
-  }
-  return classNames.join(' ')
-}
 
-export default MultiSelect;
+export default JwtMultiSelect;
