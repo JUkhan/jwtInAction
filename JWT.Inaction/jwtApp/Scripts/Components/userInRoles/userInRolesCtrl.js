@@ -42,6 +42,7 @@ class userInRolesCtrl extends BaseCtrl
 	    
 	}
 	addRole(roleName){
+	    
 	    if(roleName){
 	        this.svc.addRole(roleName).success(res=>{
 	          
