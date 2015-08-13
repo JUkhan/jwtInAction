@@ -24,7 +24,7 @@ class homeCtrl extends BaseCtrl
           ];
 	}
   	loadData(){
-     //SVC.get(this).getScalarValue('home_create',[{name:'name', value:'Bristy Khan'}]).success(data=>{console.log(data)});
+  	   
       this.chartConfig={
           "options":{
               "chart":{"type":"areaspline"},
