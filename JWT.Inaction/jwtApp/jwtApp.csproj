@@ -364,12 +364,6 @@
     <Content Include="Scripts\config.js" />
     <Content Include="Scripts\d3.min.js" />
     <Content Include="Scripts\Directives\jwtFilter\jwtFilter.js" />
-    <Content Include="Scripts\Directives\spark\spark.css" />
-    <Content Include="Scripts\Directives\spark\spark.html" />
-    <Content Include="Scripts\Directives\spark\spark.js" />
-    <Content Include="Scripts\Directives\tableCom\tableCom.css" />
-    <Content Include="Scripts\Directives\tableCom\tableCom.html" />
-    <Content Include="Scripts\Directives\tableCom\tableCom.js" />
     <Content Include="Scripts\Filters\jwtDate.js" />
     <Content Include="Scripts\highcharts-ng.js" />
     <Content Include="Scripts\highstock.src.js" />

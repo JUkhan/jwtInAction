@@ -480,3 +480,4 @@ File name: 'E:\FFV\jwtInAction\JWT.Inaction\jwtApp\Scripts\Layouts\root\signup.h
 2015-08-15 07:41:05,637 [28] INFO  Jwtex.JwtExController - files found: 6
 2015-08-15 07:42:01,020 [37] INFO  Jwtex.JwtExController - name:undefined, mode:Base
 2015-08-15 07:42:01,021 [37] INFO  Jwtex.JwtExController - files found: 5
+2015-08-15 08:07:09,348 [22] INFO  jwt.internals.jwtAppManager - home
