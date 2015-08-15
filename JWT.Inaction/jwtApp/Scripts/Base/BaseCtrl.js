@@ -19,7 +19,7 @@ class BaseCtrl{
             }
         }
     }
-    gRunner(g){
+    syncCall(g){
         let it=g(),ret;
         (function iterate(val){
             ret=it.next(val);

@@ -18,12 +18,12 @@ angular.module(moduleName,['ui.router', 'ngResource',"ngSanitize",  'LocalStorag
         $httpProvider.interceptors.push('authInterceptorService');
     })
     .constant('ngAuthSettings', {
-        stsServiceBaseUri: 'http://dacw0066/sts/',        
-        apiServiceBaseUri: 'http://dacw0066/WebApi/',
+        stsServiceBaseUri: 'http://localhost/jwtComponents/',        
+        apiServiceBaseUri: 'http://localhost/jwtComponents/',
         clientId: 'jwtApp'//nativeApp//jwtApp
     })
     .run(['authService', '$rootScope', '$templateCache', function(authService, $rootScope, $templateCache) {
-        authService.fillAuthData();
+        //authService.fillAuthData();
         //$rootScope.$on('$viewContentLoaded', function() {
         //    $templateCache.removeAll();
         //});

@@ -325,8 +325,6 @@
     <Content Include="Scripts\ace\worker-php.js" />
     <Content Include="Scripts\ace\worker-xml.js" />
     <Content Include="Scripts\ace\worker-xquery.js" />
-    <Content Include="Scripts\angular-local-storage.min.js" />
-    <Content Include="Scripts\angularjs-nvd3-directives.min.js" />
     <Content Include="Scripts\app.controllers.js" />
     <Content Include="Scripts\app.directives.js" />
     <Content Include="Scripts\app.filters.js" />
@@ -382,6 +380,30 @@
     <Content Include="Scripts\Layouts\root\root.html" />
     <Content Include="Scripts\Layouts\root\rootCtrl.js" />
     <Content Include="Scripts\Layouts\root\rootSvc.js" />
+    <Content Include="Scripts\lib\angular\angular-animate.min.js" />
+    <Content Include="Scripts\lib\angular\angular-local-storage.min.js" />
+    <Content Include="Scripts\lib\angular\angular-resource.min.js" />
+    <Content Include="Scripts\lib\angular\angular-sanitize.min.js" />
+    <Content Include="Scripts\lib\angular\angular-touch.min.js" />
+    <Content Include="Scripts\lib\angular\angular-ui-router.min.js" />
+    <Content Include="Scripts\lib\angular\angular.min.js" />
+    <Content Include="Scripts\lib\es5-sham.js" />
+    <Content Include="Scripts\lib\es5-sham.min.js" />
+    <Content Include="Scripts\lib\es5-shim.js" />
+    <Content Include="Scripts\lib\es5-shim.min.js" />
+    <Content Include="Scripts\lib\html5shiv-printshiv.js" />
+    <Content Include="Scripts\lib\html5shiv-printshiv.min.js" />
+    <Content Include="Scripts\lib\html5shiv.js" />
+    <Content Include="Scripts\lib\html5shiv.min.js" />
+    <Content Include="Scripts\lib\jquery-2.1.1\jquery.js" />
+    <Content Include="Scripts\lib\jquery-2.1.1\jquery.min.js" />
+    <Content Include="Scripts\lib\react\JSXTransformer.js" />
+    <Content Include="Scripts\lib\react\ngReact.js" />
+    <Content Include="Scripts\lib\react\react.js" />
+    <Content Include="Scripts\lib\react\react.min.js" />
+    <Content Include="Scripts\lib\traceur_.js" />
+    <Content Include="Scripts\lib\traceur.js" />
+    <Content Include="Scripts\lib\typedarray.js" />
     <Content Include="Scripts\loading-bar.min.js" />
     <Content Include="Scripts\Modules\jwtComponents\jwtComponents.css" />
     <Content Include="Scripts\Modules\jwtComponents\jwtComponents.js" />
@@ -399,12 +421,6 @@
     <Content Include="Scripts\Modules\jwtComponents\JwtUtil.js" />
     <Content Include="Scripts\Modules\testModule\testModule.js" />
     <Content Include="Scripts\Modules\testModule\testService.js" />
-    <Content Include="Scripts\nv.d3.js" />
-    <Content Include="Scripts\react\JSXTransformer.js" />
-    <Content Include="Scripts\react\ngReact.js" />
-    <Content Include="Scripts\react\react.js" />
-    <Content Include="Scripts\react\react.min.js" />
-    <Content Include="Scripts\typedarray.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -439,6 +455,8 @@
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\authJwtApp.pubxml" />
     <None Include="Properties\PublishProfiles\jwtApp.pubxml" />
+    <Content Include="Scripts\lib\es5-sham.map" />
+    <Content Include="Scripts\lib\es5-shim.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
