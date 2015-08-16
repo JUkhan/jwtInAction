@@ -12,9 +12,9 @@ class BaseCtrl{
             var ob = angular.fromJson(window.sessionStorage["jwtFilter"]);
             if (angular.isObject(ob)) {
                 for (var prop in ob) {					
-                    if (scope.hasOwnProperty(prop)) {
+                    //if (scope.hasOwnProperty(prop)) {
                         scope[prop] = ob[prop];
-                    }
+                    //}
                 }
             }
         }

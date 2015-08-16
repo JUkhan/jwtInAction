@@ -26,5 +26,9 @@
             </div>
         </div>
     </div>
-
+<br>
+<div>Change Country <select ng-model="vm.COUNTRY_ID" jwt-filter ng-options="item.id as item.country for item in vm.countryList">
+    
+</select>
+</div>
 <div ui-view></div>
