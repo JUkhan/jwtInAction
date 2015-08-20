@@ -1,10 +1,10 @@
 import BaseSvc from 'Scripts/base/BaseSvc.js';
-const HTTP=new WeakMap();
+
 class sparkWidgetSvc extends BaseSvc
 {
 	constructor(http){
 		super(http);
-		HTTP.set(this, http);
+	    this.http=http;
 	}
 	static sparkWidgetFactory(http)	{
 		return new sparkWidgetSvc(http);

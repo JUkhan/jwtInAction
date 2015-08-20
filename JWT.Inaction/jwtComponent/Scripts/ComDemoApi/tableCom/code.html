@@ -4,7 +4,7 @@
  loadData(){
     this.columnDef=[{field:'Country'}, {field:'Name', displayName:'Person Name'},{field:'Age'},
     {field:'IsMarried', template:'&lt;input type="checkbox" ng-model="row.IsMarried" disabled /&gt;'},
-    {field:'Beloved', template:'&lt;b&gt;{{row.Beloved}}&lt;/b&gt;&lt;span spark data="row.sparkData">&lt;/span&gt;'}
+    {field:'Beloved', template:'&lt;b&gt;{{row.Beloved}}&lt;/b&gt;&lt;span spark-line data="row.sparkData">&lt;/span&gt;'}
                     ];
      
     let dataConfig={limit:20, columns:[

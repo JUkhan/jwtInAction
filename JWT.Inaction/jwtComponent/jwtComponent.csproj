@@ -276,9 +276,6 @@
     <Content Include="Scripts\Directives\comInstaller\comInstaller.html" />
     <Content Include="Scripts\Directives\comInstaller\comInstaller.js" />
     <Content Include="Scripts\Directives\jwtFilter\jwtFilter.js" />
-    <Content Include="Scripts\Directives\spark\spark.css" />
-    <Content Include="Scripts\Directives\spark\spark.html" />
-    <Content Include="Scripts\Directives\spark\spark.js" />
     <Content Include="Scripts\Directives\tableCom\tableCom.css" />
     <Content Include="Scripts\Directives\tableCom\tableCom.html" />
     <Content Include="Scripts\Directives\tableCom\tableCom.js" />
