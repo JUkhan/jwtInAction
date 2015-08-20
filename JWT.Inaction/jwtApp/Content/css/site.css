@@ -60,14 +60,14 @@ body {
         border-top-right-radius: 0;
     }
   .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1000;
-  display:none;
-  background-color: rgba(0,0,0,0.01);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1000;
+      display:none;
+      background-color: rgba(0,0,0,0.01);
 }
 .jwt-spinner {
     /* some styles to position the modal at the center of the page */

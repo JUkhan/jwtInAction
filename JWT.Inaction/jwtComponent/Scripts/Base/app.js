@@ -6,11 +6,11 @@ import {default as controllers} from 'Scripts/app.controllers.js';
 import {default as services} from 'Scripts/app.services.js';
 import {default as directives} from 'Scripts/app.directives.js';
 import {default as filters} from 'Scripts/app.filters.js';
-import angularCharts from 'Scripts/Modules/angularCharts/angularCharts.js';
+
 
 var moduleName='app'; 
 
-angular.module(moduleName,['ui.router', 'ngResource',"ngSanitize",  'LocalStorageModule', 'angular-loading-bar','ui.bootstrap', controllers, services, directives, filters, angularCharts])
+angular.module(moduleName,['ui.router', 'ngResource',"ngSanitize",  'LocalStorageModule', 'angular-loading-bar','ui.bootstrap', controllers, services, directives, filters])
     .factory('authInterceptorService', authInterceptorService)
     .factory('authService', authService)
     .config(config)
@@ -24,9 +24,9 @@ angular.module(moduleName,['ui.router', 'ngResource',"ngSanitize",  'LocalStorag
     })
     .run(['authService', '$rootScope', '$templateCache', function(authService, $rootScope, $templateCache) {
         //authService.fillAuthData();
-        //$rootScope.$on('$viewContentLoaded', function() {
-        //    $templateCache.removeAll();
-        //});
+       /* $rootScope.$on('$viewContentLoaded', function() {
+            $templateCache.removeAll();
+        });*/
     }]);
 
 export default moduleName;

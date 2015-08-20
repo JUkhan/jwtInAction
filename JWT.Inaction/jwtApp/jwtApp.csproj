@@ -381,6 +381,21 @@
     <Content Include="Scripts\lib\angular\angular-touch.min.js" />
     <Content Include="Scripts\lib\angular\angular-ui-router.min.js" />
     <Content Include="Scripts\lib\angular\angular.min.js" />
+    <Content Include="Scripts\lib\colorpicker\css\bootstrap-colorpicker.css" />
+    <Content Include="Scripts\lib\colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="Scripts\lib\colorpicker\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Scripts\lib\colorpicker\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Scripts\lib\colorpicker\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Scripts\lib\colorpicker\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Scripts\lib\colorpicker\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Scripts\lib\colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="Scripts\lib\colorpicker\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Scripts\lib\datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Scripts\lib\datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\lib\dialog\bootstrap-dialog.min.css" />
+    <Content Include="Scripts\lib\dialog\bootstrap-dialog.min.js" />
+    <Content Include="Scripts\lib\dialog\info.txt" />
+    <Content Include="Scripts\lib\dialog\run_prettify.js" />
     <Content Include="Scripts\lib\es5-sham.js" />
     <Content Include="Scripts\lib\es5-sham.min.js" />
     <Content Include="Scripts\lib\es5-shim.js" />
@@ -451,6 +466,7 @@
     <None Include="Properties\PublishProfiles\jwtApp.pubxml" />
     <Content Include="Scripts\lib\es5-sham.map" />
     <Content Include="Scripts\lib\es5-shim.map" />
+    <Content Include="Scripts\lib\colorpicker\img\bootstrap-colorpicker\Thumbs.db" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

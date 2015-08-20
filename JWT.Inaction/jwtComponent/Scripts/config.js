@@ -11,6 +11,5 @@ export default function config(stateprovider, routeProvider){
 	stateprovider.state('associate',{url:'/associate',templateUrl:'Scripts/Components/associate/associate.html',controller:'associateCtrl as vm'});
 	stateprovider.state('comLayout.tableNav',{url:'/tableNav',templateUrl:'Scripts/Components/tableWidget/tableWidget.html',controller:'tableWidgetCtrl as vm'});
 	stateprovider.state('comLayout.sparkNav',{url:'/sparkNav',templateUrl:'Scripts/Components/sparkWidget/sparkWidget.html',controller:'sparkWidgetCtrl as vm'});
-	stateprovider.state('comLayout.testModuleNav',{url:'/testModuleNav',templateUrl:'Scripts/Components/testModuleWidget/testModuleWidget.html',controller:'testModuleWidgetCtrl as vm'});
 }
 config.$inject=['$stateProvider', '$urlRouterProvider'];

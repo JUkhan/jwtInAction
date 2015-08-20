@@ -14,7 +14,7 @@ class tableWidgetCtrl extends BaseCtrl
   	loadData(){
       this.columnDef=[{field:'Country'}, {field:'Name', displayName:'Person Name'},{field:'Age'},
                      {field:'IsMarried', template:'<input type="checkbox" ng-model="row.IsMarried" disabled />'},
-                      {field:'Animal', template:'<b>{{row.Animal}}</b><span spark data="row.sparkData"></span>'}
+                      {field:'Animal', template:'<b>{{row.Animal}}</b><span spark data="row.sparkData" type="bar"></span>'}
                      ];
       
       let dataConfig={limit:20, columns:[
@@ -22,7 +22,7 @@ class tableWidgetCtrl extends BaseCtrl
         {field:'Name', type:'human'},
         {field:'Age', type:'int', min:20, max:100},
         {field:'IsMarried', type:'bool'},
-        {field:'Animal', type:'animal'},{name:'sparkData', type:'int', array:true, limit:12, min:1, max:10}
+        {field:'Animal', type:'animal'},{field:'sparkData', type:'int', array:true, limit:12, min:1, max:10}
       ]};      
       
       SVC.get(this).getDummyData(dataConfig)

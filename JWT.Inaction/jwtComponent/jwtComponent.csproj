@@ -254,7 +254,6 @@
     <Content Include="Scripts\Base\BaseCtrl.js" />
     <Content Include="Scripts\Base\BaseSvc.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\ComDemoApi\angularCharts\code.html" />
     <Content Include="Scripts\ComDemoApi\tableCom\code.html" />
     <Content Include="Scripts\Components\associate\associate.html" />
     <Content Include="Scripts\Components\associate\associateCtrl.js" />
@@ -271,9 +270,6 @@
     <Content Include="Scripts\Components\tableWidget\tableWidget.html" />
     <Content Include="Scripts\Components\tableWidget\tableWidgetCtrl.js" />
     <Content Include="Scripts\Components\tableWidget\tableWidgetSvc.js" />
-    <Content Include="Scripts\Components\testModuleWidget\testModuleWidget.html" />
-    <Content Include="Scripts\Components\testModuleWidget\testModuleWidgetCtrl.js" />
-    <Content Include="Scripts\Components\testModuleWidget\testModuleWidgetSvc.js" />
     <Content Include="Scripts\config.js" />
     <Content Include="Scripts\d3.min.js" />
     <Content Include="Scripts\Directives\comInstaller\comInstaller.css" />
@@ -292,6 +288,30 @@
     <Content Include="Scripts\Layouts\comLayout\comLayoutCtrl.js" />
     <Content Include="Scripts\Layouts\root\root.html" />
     <Content Include="Scripts\Layouts\root\rootCtrl.js" />
+    <Content Include="Scripts\lib\angular\angular-animate.min.js" />
+    <Content Include="Scripts\lib\angular\angular-local-storage.min.js" />
+    <Content Include="Scripts\lib\angular\angular-resource.min.js" />
+    <Content Include="Scripts\lib\angular\angular-sanitize.min.js" />
+    <Content Include="Scripts\lib\angular\angular-touch.min.js" />
+    <Content Include="Scripts\lib\angular\angular-ui-router.min.js" />
+    <Content Include="Scripts\lib\angular\angular.min.js" />
+    <Content Include="Scripts\lib\es5-sham.js" />
+    <Content Include="Scripts\lib\es5-sham.min.js" />
+    <Content Include="Scripts\lib\es5-shim.js" />
+    <Content Include="Scripts\lib\es5-shim.min.js" />
+    <Content Include="Scripts\lib\html5shiv-printshiv.js" />
+    <Content Include="Scripts\lib\html5shiv-printshiv.min.js" />
+    <Content Include="Scripts\lib\html5shiv.js" />
+    <Content Include="Scripts\lib\html5shiv.min.js" />
+    <Content Include="Scripts\lib\jquery-2.1.1\jquery.js" />
+    <Content Include="Scripts\lib\jquery-2.1.1\jquery.min.js" />
+    <Content Include="Scripts\lib\react\JSXTransformer.js" />
+    <Content Include="Scripts\lib\react\ngReact.js" />
+    <Content Include="Scripts\lib\react\react.js" />
+    <Content Include="Scripts\lib\react\react.min.js" />
+    <Content Include="Scripts\lib\traceur.js" />
+    <Content Include="Scripts\lib\traceur_.js" />
+    <Content Include="Scripts\lib\typedarray.js" />
     <Content Include="Scripts\loading-bar.min.js" />
     <Content Include="Scripts\Modules\angularCharts\angularCharts.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.12.1.min.js" />
@@ -324,6 +344,8 @@
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\jwtComponent.pubxml" />
     <None Include="Properties\PublishProfiles\jwtComponents.pubxml" />
+    <Content Include="Scripts\lib\es5-sham.map" />
+    <Content Include="Scripts\lib\es5-shim.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

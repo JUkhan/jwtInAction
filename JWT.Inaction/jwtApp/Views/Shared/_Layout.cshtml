@@ -29,20 +29,23 @@
             <p>&copy; jwtApp</p>
         </footer>
     </div>
+    <div class="overlay">
+        <div class="jwt-spinner"><i class="fa fa-refresh fa-spin"></i></div>
+    </div>
     <script src="Scripts/lib/traceur.js"></script>
 
     <!--[if IE]>
-    <script src="Scripts/lib/es5-shim.js"></script>
-    <script src="Scripts/lib/es5-sham.js"></script>
-    <script src="Scripts/lib/typedarray.js"></script>
+    <script src="~/Scripts/lib/es5-shim.js"></script>
+    <script src="~/Scripts/lib/es5-sham.js"></script>
+    <script src="~/Scripts/lib/typedarray.js"></script>
     <![endif]-->
 
-    <script src="Scripts/lib/jquery-2.1.1/jquery.min.js"></script>
-    <script src="Scripts/lib/angular/angular.min.js"></script>
-    <script src="Scripts/lib/angular/angular-animate.min.js"></script>
-    <script src="Scripts/lib/angular/angular-resource.min.js"></script>
-    <script src="Scripts/lib/angular/angular-sanitize.min.js"></script>
-    <script src="Scripts/lib/angular/angular-ui-router.min.js"></script>
+    <script src="~/Scripts/lib/jquery-2.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/lib/angular/angular.min.js"></script>
+    <script src="~/Scripts/lib/angular/angular-animate.min.js"></script>
+    <script src="~/Scripts/lib/angular/angular-resource.min.js"></script>
+    <script src="~/Scripts/lib/angular/angular-sanitize.min.js"></script>
+    <script src="~/Scripts/lib/angular/angular-ui-router.min.js"></script>
 
 
 
@@ -58,5 +61,16 @@
     <script src="~/Scripts/highstock.src.js"></script>
     <script src="~/Scripts/highcharts-ng.js"></script>
     <script src="~/Scripts/jquery.form.js"></script>
+    <script>
+        var overLayElement = null;
+        jQuery(function () { overLayElement = $('.overlay'); })
+        function overlay(show) {
+            if (show) {
+                overLayElement.show();
+            } else {
+                overLayElement.hide();
+            }
+        }
+    </script>
 </body>
 </html>

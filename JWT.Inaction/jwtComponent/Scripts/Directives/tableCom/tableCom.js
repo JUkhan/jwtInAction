@@ -1,8 +1,8 @@
-const COMPILE=new WeakMap();
+
 class tableCom
 {
 	constructor(compile){
-      	COMPILE.set(this, compile);
+      	this.COMPILE=compile;
 		this.restrict='A';		
       	this.scope={
           data:'=', columnDef:'='
@@ -18,7 +18,9 @@ class tableCom
       	tableCom.instance.render(scope, iElement);
     }
   	render(scope, element){
-      element.empty().append(COMPILE.get(this)(this.getTemplate(scope))(scope));
+  	    
+      element.empty().append(this.COMPILE(this.getTemplate(scope))(scope));
+    
     }
   	getTemplate(scope){
       var tpl=[], data=scope.data;

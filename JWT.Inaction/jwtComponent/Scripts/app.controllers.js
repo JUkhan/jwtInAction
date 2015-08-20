@@ -5,7 +5,6 @@ import signup from 'Scripts/Components/signup/signupCtrl.js';
 import associate from 'Scripts/Components/associate/associateCtrl.js';
 import tableWidget from 'Scripts/Components/tableWidget/tableWidgetCtrl.js';
 import sparkWidget from 'Scripts/Components/sparkWidget/sparkWidgetCtrl.js';
-import testModuleWidget from 'Scripts/Components/testModuleWidget/testModuleWidgetCtrl.js';
 import root from 'Scripts/Layouts/root/rootCtrl.js';
 import comLayout from 'Scripts/Layouts/comLayout/comLayoutCtrl.js';
 
@@ -18,7 +17,6 @@ angular.module(moduleName,[])
 .controller('associateCtrl', associate)
 .controller('tableWidgetCtrl', tableWidget)
 .controller('sparkWidgetCtrl', sparkWidget)
-.controller('testModuleWidgetCtrl', testModuleWidget)
 .controller('rootCtrl', root)
 .controller('comLayoutCtrl', comLayout);
 

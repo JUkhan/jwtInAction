@@ -23,10 +23,10 @@ angular.module(moduleName,['ui.router', 'ngResource', 'LocalStorageModule', 'ang
         clientId: 'jwtApp'//nativeApp//jwtApp
     })
     .run(['authService', '$rootScope', '$templateCache', function(authService, $rootScope, $templateCache) {
-        authService.fillAuthData();
-        //$rootScope.$on('$viewContentLoaded', function() {
-        //    $templateCache.removeAll();
-        //});
+        authService.fillAuthData();        
+        $rootScope.$on('$viewContentLoaded', function() {
+            $templateCache.removeAll();
+        });
     }]);
 
 export default moduleName;
