@@ -1,0 +1,29 @@
+﻿<pre>
+&lt;per-item data="{categoryList:['Share', 'Sales', 'Growth','Above/Below']}" options="{tplId:1}"&gt;&lt;/per-item&gt;
+&lt;per-item data="vm.data1" options="{tplId:2, onClick:vm.show}"&gt;&lt;/per-item&gt;
+&lt;per-item data="vm.data2" options="{tplId:3,  onClick:vm.show}"&gt;&lt;/per-item&gt;
+<code>
+    this.data1={title:'Belgium', colorCode:'red', chart:'Absolute', period:'May/May',
+     from:'JAN-2014', to:'MAR-2014',volume:'SU',
+	sparkList:[
+    	{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'},
+    	{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'},
+    	{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'},
+    	{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'}
+    	]
+	};
+		    
+	this.data2={title:'Channels', 
+	sparkList:[
+		{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'},
+		{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'},
+		{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'},
+		{min:'-3%', max:'10%', data:'9,4,-3,7,8,10,12,8,9,4,14,12,13'}
+		]
+	};
+	
+	show(item){
+	    alert(item.title);
+	}
+</code>
+</pre>

@@ -254,6 +254,8 @@
     <Content Include="Scripts\Base\BaseCtrl.js" />
     <Content Include="Scripts\Base\BaseSvc.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ComDemoApi\perItem\code.html" />
+    <Content Include="Scripts\ComDemoApi\perTable\code.html" />
     <Content Include="Scripts\ComDemoApi\tableCom\code.html" />
     <Content Include="Scripts\Components\associate\associate.html" />
     <Content Include="Scripts\Components\associate\associateCtrl.js" />
@@ -262,6 +264,13 @@
     <Content Include="Scripts\Components\home\homeSvc.js" />
     <Content Include="Scripts\Components\login\login.html" />
     <Content Include="Scripts\Components\login\loginCtrl.js" />
+    <Content Include="Scripts\Components\perItemWidget\perItemWidget.html" />
+    <Content Include="Scripts\Components\perItemWidget\perItemWidgetCtrl.js" />
+    <Content Include="Scripts\Components\perItemWidget\perItemWidgetSvc.js" />
+    <Content Include="Scripts\Components\perItemWidget\perTableWidgetCtrl.js" />
+    <Content Include="Scripts\Components\perTableWidget\perTableWidget.html" />
+    <Content Include="Scripts\Components\perTableWidget\perTableWidgetCtrl.js" />
+    <Content Include="Scripts\Components\perTableWidget\perTableWidgetSvc.js" />
     <Content Include="Scripts\Components\signup\signup.html" />
     <Content Include="Scripts\Components\signup\signupCtrl.js" />
     <Content Include="Scripts\Components\sparkWidget\sparkWidget.html" />
@@ -276,6 +285,12 @@
     <Content Include="Scripts\Directives\comInstaller\comInstaller.html" />
     <Content Include="Scripts\Directives\comInstaller\comInstaller.js" />
     <Content Include="Scripts\Directives\jwtFilter\jwtFilter.js" />
+    <Content Include="Scripts\Directives\perItem\perItem.css" />
+    <Content Include="Scripts\Directives\perItem\perItem.html" />
+    <Content Include="Scripts\Directives\perItem\perItem.js" />
+    <Content Include="Scripts\Directives\perTable\perTable.css" />
+    <Content Include="Scripts\Directives\perTable\perTable.html" />
+    <Content Include="Scripts\Directives\perTable\perTable.js" />
     <Content Include="Scripts\Directives\sparkLine\sparkLine.css" />
     <Content Include="Scripts\Directives\sparkLine\sparkLine.html" />
     <Content Include="Scripts\Directives\sparkLine\sparkLine.js" />

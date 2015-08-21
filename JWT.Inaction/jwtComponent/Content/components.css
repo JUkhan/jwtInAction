@@ -1,3 +1,5 @@
 @import '../Scripts/Directives/comInstaller/comInstaller.css';
+@import '../Scripts/Directives/perItem/perItem.css';
+@import '../Scripts/Directives/perTable/perTable.css';
 @import '../Scripts/Directives/sparkLine/sparkLine.css';
 @import '../Scripts/Directives/tableCom/tableCom.css';

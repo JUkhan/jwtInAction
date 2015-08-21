@@ -1,0 +1,63 @@
+
+.per-item{
+    
+}
+.per-item .tpl1{
+    padding-top:1px;
+}
+.per-item .tpl2{
+    border:solid 1px #ededed;
+    height:auto;
+    border-radius:.4em;
+    cursor:pointer;
+}
+.per-item .tpl3{
+    border:solid 1px #ededed;
+    height:auto;
+    border-radius:.4em;
+    padding:5px;
+}
+.per-item .tpl2:hover{
+    border-color:purple;
+}
+
+.per-item .title{
+    padding:5px;
+}
+
+.per-item .jqstooltip{
+   width:0px; height:0px;
+}
+
+.per-item .main-title{
+   padding-left:6px;
+}
+.per-item .min{
+    padding-right:10px;
+}
+.per-item .max{
+    padding-left:10px;
+}
+.per-item .spark-content{
+    padding-top:6px;
+    padding-box:6px;
+    margin-bottom:10px;
+    border-top:solid 1px #d3d3d3;
+    border-bottom:solid 1px #d3d3d3;
+}
+.per-item .tpl3 .items{
+    margin-bottom:0px;
+}
+.per-item .footer{
+     border-top:solid 1px #d3d3d3;
+}
+.per-item .gray{
+    color:#ededed;
+}
+.per-item .item{
+   padding-left:5px;
+   border-top-left-radius:4px;
+   border-bottom-left-radius:4px;
+   border-left:solid 1px #d3d3d3;
+   
+}

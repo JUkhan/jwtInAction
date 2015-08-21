@@ -11,5 +11,7 @@ export default function config(stateprovider, routeProvider){
 	stateprovider.state('associate',{url:'/associate',templateUrl:'Scripts/Components/associate/associate.html',controller:'associateCtrl as vm'});
 	stateprovider.state('comLayout.tableNav',{url:'/tableNav',templateUrl:'Scripts/Components/tableWidget/tableWidget.html',controller:'tableWidgetCtrl as vm'});
 	stateprovider.state('comLayout.sparkNav',{url:'/sparkNav',templateUrl:'Scripts/Components/sparkWidget/sparkWidget.html',controller:'sparkWidgetCtrl as vm'});
+	stateprovider.state('comLayout.perItem_nav',{url:'/perItem_nav',templateUrl:'Scripts/Components/perItemWidget/perItemWidget.html',controller:'perItemWidgetCtrl as vm'});
+	stateprovider.state('comLayout.perTable_nav',{url:'/perTable_nav',templateUrl:'Scripts/Components/perTableWidget/perTableWidget.html',controller:'perTableWidgetCtrl as vm'});
 }
 config.$inject=['$stateProvider', '$urlRouterProvider'];

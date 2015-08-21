@@ -1,0 +1,12 @@
+
+.per-table{
+    margin-bottom:10px;
+}
+
+.per-table .first-item{
+   padding-right:0px; 
+}
+
+.per-table .second-item{
+    padding-left:0px; 
+}
