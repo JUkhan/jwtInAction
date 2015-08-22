@@ -20,6 +20,9 @@
 .per-item .tpl2:hover{
     border-color:purple;
 }
+.per-item .selected{
+    border-color:purple;
+}
 
 .per-item .title{
     padding:5px;
@@ -31,6 +34,9 @@
 
 .per-item .main-title{
    padding-left:6px;
+}
+.per-item .right-title{
+   font-size:10px;
 }
 .per-item .min{
     padding-right:10px;
@@ -49,7 +55,7 @@
     margin-bottom:0px;
 }
 .per-item .footer{
-     border-top:solid 1px #d3d3d3;
+     
 }
 .per-item .gray{
     color:#ededed;

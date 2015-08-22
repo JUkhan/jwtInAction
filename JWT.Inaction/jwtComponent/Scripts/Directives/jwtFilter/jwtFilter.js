@@ -1,4 +1,5 @@
 
+
 class jwtFilter{
     constructor(rootScope){       
         this.restrict='A';
@@ -11,7 +12,7 @@ class jwtFilter{
         window.sessionStorage.setItem("jwtFilter", angular.toJson(data));
     }
     link(scope, jquery, attrs, ctrl){
-        var filterNaame = attrs.dbFilter || attrs.ngModel;
+        var filterNaame = attrs.jwtFilter || attrs.ngModel;
         scope.$watch(filterNaame, function (newVal, oldVal) {
             filterNaame=filterNaame.replace('vm.','');
             jwtFilter.instance.rootScope.$broadcast("FilterValueChanged", { name: filterNaame, newValue: newVal, oldValue: oldVal });

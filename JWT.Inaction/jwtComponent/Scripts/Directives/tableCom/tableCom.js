@@ -3,7 +3,7 @@ class tableCom
 {
 	constructor(compile){
       	this.COMPILE=compile;
-		this.restrict='A';		
+		this.restrict='AE';		
       	this.scope={
           data:'=', columnDef:'='
         };

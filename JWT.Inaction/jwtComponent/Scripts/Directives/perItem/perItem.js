@@ -8,6 +8,9 @@ class perItem
 	}
 	controller($scope){
 	    $scope.itemClick=function(data){
+	        if(!angular.isUndefined($scope.options.selectableItem)){
+	            $scope.options.selectableItem=data.title;
+	        }
 	        if($scope.options && $scope.options.onClick){
 	            $scope.options.onClick(data);
 	        }
@@ -51,11 +54,11 @@ class perItem
     }
      getTpl_2(scope){
         var tpl=[];
-        tpl.push('<div class="per-item"><div class="tpl2" ng-click="itemClick(data)">');
+        tpl.push('<div class="per-item"><div class="tpl2" ng-class="{selected:options.selectableItem===data.title}" ng-click="itemClick(data)">');
         tpl.push('<div class="title"><span style="background-color:{{data.colorCode}}" class="badge">&nbsp;</span><strong class="main-title" ng-bind="data.title"></strong>');
-        tpl.push('<span class="pull-right" ng-bind="data.period"></span></div>');
-        tpl.push('<div class="title" ng-if="data.chart===\'Tread\'"><span ng-bind="data.from"></span><span class="pull-right" ng-bind="data.to"></span></div>');
-        tpl.push('<div class="title" ng-if="data.chart!==\'Tread\'"><span ng-class="{gray:data.chart!==\'Dynamics\'}">Dynamics</span>');
+        tpl.push('<span class="pull-right right-title" ng-bind="data.period"></span></div>');
+        tpl.push('<div class="title" ng-if="data.chart===\'Trend\'"><span ng-bind="data.from"></span><span class="pull-right" ng-bind="data.to"></span></div>');
+        tpl.push('<div class="title" ng-if="data.chart!==\'Trend\'"><span ng-class="{gray:data.chart!==\'Dynamics\'}">Dynamics</span>');
         tpl.push('<span class="pull-right" ng-class="{gray:data.chart!==\'Absolute\'}">Absolute</span></div>');
         tpl.push('<div class="spark-content" ng-repeat="item in data.sparkList"><div class="text-center">');
         tpl.push('<span class="min" ng-bind="item.min"></span>');
@@ -68,7 +71,7 @@ class perItem
     }
      getTpl_3(scope){
         var tpl=[];
-        tpl.push('<div class="per-item"><div class="title"><strong ng-bind="data.title"></strong></div><div class="tpl3" ng-click="itemClick(data)">');
+        tpl.push('<div class="per-item"><div class="title"><strong ng-bind="data.title"></strong></div><div class="tpl3" ng-class="{selected:options.selectableItem===data.title}" ng-click="itemClick(data)">');
        
         tpl.push('<div class="itemst" ng-repeat="item in data.sparkList">');
         tpl.push('<span class="min" ng-bind="item.min"></span>');
